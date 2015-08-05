@@ -1,0 +1,77 @@
+﻿body 
+{
+    background-image: url(/Content/Image/bck.jpg);
+    text-align:center;
+}
+header 
+{
+    margin-top:0px;
+    height:60px;
+    border: 5px solid red;
+    border-radius:20px 20px;
+    margin-left:5%;
+    margin-right:5%;  
+}
+#content 
+{
+    border: 5px solid red;
+    border-radius:20px 20px;
+    margin-left:5%;
+    margin-right:5%;  
+    margin-top:3%;
+    margin-bottom:3%;  
+    height: 500px;
+}
+footer 
+{
+    border: 5px solid red;
+    border-radius:20px 20px;
+    margin-left:5%;
+    margin-right:5%;  
+    margin-top:3%;
+    margin-bottom:3%;  
+}
+
+/*-------------------------------------------ÜST MENÜ ---------------------------------------------*/
+
+#menu 
+{
+    margin-left:29%;    
+}
+
+#menu ul
+{    
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+
+#menu li
+{
+    text-align:center;
+    height:100%;   
+    background-image: url(/Content/Image/bckmenu.jpg);   
+    background-position:center;
+    background-size:contain;    
+    border-radius:10px; 
+    list-style: none;
+    float: left;
+    margin-right: 0.5em;
+}
+
+#menu a
+{    
+    height:100%;
+    display: block;
+    width: 8em;
+    color: white;
+    text-decoration: none; 
+    border-radius:10px;
+}
+
+#menu a:hover
+{
+    background-color: #42AFDC;
+}
+
+/*------------------------------------------------------------------------------------------------*/
