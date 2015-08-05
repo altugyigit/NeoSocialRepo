@@ -49,8 +49,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
-    <Compile Include="Models\Article_Post.cs" />
-    <Compile Include="Models\Mapping\Article_Post_Map.cs" />
+    <Compile Include="Models\ArticlePost.cs" />
+    <Compile Include="Models\Mapping\ArticlePostMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
