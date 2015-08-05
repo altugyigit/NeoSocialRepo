@@ -7,7 +7,7 @@ namespace NeoSocial.Database.Models.Mapping
     {
         public Article_Post_Map()
         {
-            
+            this.HasKey(x => new { x.Post_ID });
         }
     }
 }
