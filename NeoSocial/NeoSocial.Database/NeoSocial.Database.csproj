@@ -49,15 +49,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
-<<<<<<< HEAD
-    <Compile Include="Models\Mapping\PostMap.cs" />
-    <Compile Include="Models\NeoBlogContext.cs" />
-    <Compile Include="Models\Post.cs" />
-=======
-    <Compile Include="Models\ArticlePost.cs" />
-    <Compile Include="Models\Mapping\ArticlePostMap.cs" />
-    <Compile Include="Models\NeoSocialContext.cs" />
->>>>>>> 348c6d88ff250f3dbb23214afb51a6d923f91368
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\Base\DbContextFactory.cs" />
     <Compile Include="Repository\Base\IRepository.cs" />
