@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using NeoSocial.Database.Models;
 
-namespace NeoSocial.Database.Models.Repository
+namespace NeoSocial.Database.Repository
 {
     /// <summary>
     /// Creates instance of specific DbContext
