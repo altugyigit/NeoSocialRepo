@@ -72,7 +72,9 @@
     <Compile Include="Repository\Base\Repository.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="CodeTemplates\ReverseEngineerCodeFirst\Context.tt" />
     <None Include="CodeTemplates\ReverseEngineerCodeFirst\Entity.tt" />
     <None Include="CodeTemplates\ReverseEngineerCodeFirst\Mapping.tt" />
