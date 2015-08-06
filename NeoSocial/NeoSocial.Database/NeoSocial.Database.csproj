@@ -79,6 +79,7 @@
     <Compile Include="Repository\CountryRepository.cs" />
     <Compile Include="Repository\IconRepository.cs" />
     <Compile Include="UnitOfWork\IUnitOfWork.cs" />
+    <Compile Include="UnitOfWork\PostContext.cs" />
     <Compile Include="UnitOfWork\UserContext.cs" />
   </ItemGroup>
   <ItemGroup>
