@@ -72,6 +72,10 @@
     <Compile Include="Repository\Base\IRepository.cs" />
     <Compile Include="Repository\Base\Repository.cs" />
     <Compile Include="Repository\CommentRepository.cs" />
+    <Compile Include="Repository\UserRegisterRepository.cs" />
+    <Compile Include="Repository\UserProfileRepository.cs" />
+    <Compile Include="Repository\UserLoginRepository.cs" />
+    <Compile Include="Repository\TurkeyCityRepository.cs" />
     <Compile Include="Repository\CountryRepository.cs" />
     <Compile Include="Repository\IconRepository.cs" />
   </ItemGroup>

@@ -7,12 +7,12 @@ using NeoSocial.Database.Models;
 
 namespace NeoSocial.Database.Repository
 {
-    public interface IArticlePost : IRepository<ArticlePost>
+    public interface IUserRegister : IRepository<UserRegister>
     { }
 
-    public class TurkeyCityRepository : Repository<ArticlePost>, IArticlePost
+    public class UserRegisterRepository : Repository<UserRegister>, IUserRegister
     {
-        public TurkeyCityRepository(DbContext dbContext)
+        public UserRegisterRepository(DbContext dbContext)
             : base(dbContext)
         { }
     }
