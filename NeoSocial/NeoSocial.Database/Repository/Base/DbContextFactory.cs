@@ -23,7 +23,7 @@ namespace NeoSocial.Database.Models.Repository
 
         public DbContextFactory()
         {
-            _context = new NeoSocial.Database.Models.Context.NeoSocialContext();
+            _context = new NeoSocial.Database.Models.NeoSocialContext();
         }
 
         public DbContext GetDbContext()
@@ -33,7 +33,7 @@ namespace NeoSocial.Database.Models.Repository
 
         public DbContext CreateNewContext()
         {
-            return new NeoSocial.Database.Models.Context.NeoSocialContext();
+            return new NeoSocial.Database.Models.NeoSocialContext();
         }
     }
 }
