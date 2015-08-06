@@ -7,12 +7,12 @@ using NeoSocial.Database.Models;
 
 namespace NeoSocial.Database.Repository
 {
-    public interface IUserProfile : IRepository<UserProfile>
+    public interface IComment : IRepository<Comment>
     { }
 
-    public class UserProfileRepository : Repository<UserProfile>, IUserProfile
+    public class CommentRepository : Repository<Comment>, IComment
     {
-        public UserProfileRepository(DbContext dbContext)
+        public CommentRepository(DbContext dbContext)
             : base(dbContext)
         { }
     }

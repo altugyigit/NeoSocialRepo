@@ -10,9 +10,9 @@ namespace NeoSocial.Database.Repository
     public interface IArticlePost : IRepository<ArticlePost>
     { }
 
-    public class TurkeyCityRepository : Repository<ArticlePost>, IArticlePost
+    public class ArticlePostRepository : Repository<ArticlePost>, IArticlePost
     {
-        public TurkeyCityRepository(DbContext dbContext)
+        public ArticlePostRepository(DbContext dbContext)
             : base(dbContext)
         { }
     }

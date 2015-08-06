@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NeoSocial.Database.UnitOfWork
+namespace NeoSocial.Database.IUnitOfWork
 {
-  public  interface IUnitOfWork : IDisposable
+    public interface IUnitOfWork : IDisposable
     {
         void Commit();
     }
