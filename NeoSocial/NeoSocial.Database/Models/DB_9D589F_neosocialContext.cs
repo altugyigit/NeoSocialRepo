@@ -17,12 +17,10 @@ namespace NeoSocial.Database.Models
         }
 
         public DbSet<ArticlePost> ArticlePosts { get; set; }
-        public DbSet<DENEME> DENEMEs { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new ArticlePostMap());
-            modelBuilder.Configurations.Add(new DENEMEMap());
         }
     }
 }
