@@ -51,10 +51,7 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Models\ArticlePost.cs" />
     <Compile Include="Models\DB_9D589F_neosocialContext.cs" />
-    <Compile Include="Models\DENEME.cs" />
     <Compile Include="Models\Mapping\ArticlePostMap.cs" />
-    <Compile Include="Models\Mapping\DENEMEMap.cs" />
-    <Compile Include="Models\NeoSocialContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\Base\DbContextFactory.cs" />
     <Compile Include="Repository\Base\IRepository.cs" />
