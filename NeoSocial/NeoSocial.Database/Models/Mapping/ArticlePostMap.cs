@@ -12,14 +12,13 @@ namespace NeoSocial.Database.Models.Mapping
 
             // Properties
             this.Property(t => t.PostHeader)
-                .HasMaxLength(200);
+                .HasMaxLength(150);
 
             this.Property(t => t.PostContent)
                 .IsRequired()
                 .HasMaxLength(2000);
 
             this.Property(t => t.PostDate)
-                .IsRequired()
                 .HasMaxLength(50);
 
             // Table & Column Mappings
@@ -28,9 +27,9 @@ namespace NeoSocial.Database.Models.Mapping
             this.Property(t => t.PostHeader).HasColumnName("PostHeader");
             this.Property(t => t.PostContent).HasColumnName("PostContent");
             this.Property(t => t.PostDate).HasColumnName("PostDate");
+            this.Property(t => t.PostOwnerID).HasColumnName("PostOwnerID");
             this.Property(t => t.PostLikeCount).HasColumnName("PostLikeCount");
             this.Property(t => t.PostCommentID).HasColumnName("PostCommentID");
-            this.Property(t => t.PostOwnerID).HasColumnName("PostOwnerID");
         }
     }
 }
