@@ -49,9 +49,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
-    <Compile Include="Models\ArticlePost.cs" />
-    <Compile Include="Models\Context\NeoSocialContext.cs" />
-    <Compile Include="Models\Mapping\ArticlePostMap.cs" />
+    <Compile Include="Models\Mapping\PostMap.cs" />
+    <Compile Include="Models\NeoBlogContext.cs" />
+    <Compile Include="Models\Post.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\Base\DbContextFactory.cs" />
     <Compile Include="Repository\Base\IRepository.cs" />
@@ -59,6 +59,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="CodeTemplates\ReverseEngineerCodeFirst\Context.tt" />
+    <None Include="CodeTemplates\ReverseEngineerCodeFirst\Entity.tt" />
+    <None Include="CodeTemplates\ReverseEngineerCodeFirst\Mapping.tt" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
