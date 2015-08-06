@@ -24,3 +24,29 @@ c:\users\altuğ\documents\visual studio 2012\Projects\NeoSocial\NeoSocial\bin\Sy
 c:\users\altuğ\documents\visual studio 2012\Projects\NeoSocial\NeoSocial\obj\Debug\NeoSocial.csprojResolveAssemblyReference.cache
 c:\users\altuğ\documents\visual studio 2012\Projects\NeoSocial\NeoSocial\obj\Debug\NeoSocial.dll
 c:\users\altuğ\documents\visual studio 2012\Projects\NeoSocial\NeoSocial\obj\Debug\NeoSocial.pdb
+C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial\bin\NeoSocial.dll
+C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial\bin\NeoSocial.pdb
+C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial\bin\Newtonsoft.Json.dll
+C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial\bin\System.Net.Http.Formatting.dll
+C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial\bin\System.Web.Helpers.dll
+C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial\bin\System.Web.Http.dll
+C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial\bin\System.Web.Http.WebHost.dll
+C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial\bin\System.Web.Mvc.dll
+C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial\bin\System.Web.Razor.dll
+C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial\bin\System.Web.WebPages.dll
+C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial\bin\System.Web.WebPages.Razor.dll
+C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial\bin\Newtonsoft.Json.xml
+C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial\bin\System.Net.Http.Formatting.xml
+C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial\bin\System.Web.Helpers.xml
+C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial\bin\System.Web.Http.xml
+C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial\bin\System.Web.Http.WebHost.xml
+C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial\bin\System.Web.Mvc.xml
+C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial\bin\System.Web.Razor.xml
+C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial\bin\System.Web.WebPages.xml
+C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial\bin\System.Web.WebPages.Razor.xml
+C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial\obj\Debug\NeoSocial.csprojResolveAssemblyReference.cache
+C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial\obj\Debug\NeoSocial.dll
+C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial\obj\Debug\NeoSocial.pdb
