@@ -106,6 +106,7 @@
   <ItemGroup>
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MainController.cs" />
+    <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -119,6 +120,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="Content\Css\main-page.css" />
     <Content Include="Content\Css\style-login.css" />
+    <Content Include="Content\Css\style-register.css" />
     <Content Include="Content\Css\style.css" />
     <Content Include="Content\Image\bck.jpg" />
     <Content Include="Content\Image\bckmenu.jpg" />
@@ -156,6 +158,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Main\MainPage.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Register\Register.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\User\ForgotPassword.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
