@@ -4,17 +4,15 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
-    <link rel="stylesheet" type="text/css" href="~/Content/Css/style.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/Css/main-page.css" />
 </head>
 <body>
     <header>
         @RenderSection("Header", false)        
         <div id="menu">
             <ul>
-                <li><b>@Html.ActionLink("Anasayfa","MainPage", "Main")</b></li>
-                <li><b>@Html.ActionLink("Yazılar","Index", "Home")</b></li>
-                <li><b>@Html.ActionLink("Sisteme Giriş","Login", "Login")</b></li>
-                <li><b>@Html.ActionLink("Hakkımızda","Index",  "Home")</b></li>
+                <li><b>@Html.ActionLink("Profil","Index", "Home")</b></li>
+                <li><b>@Html.ActionLink("Yazı Paylaş","Index", "Home")</b></li>                
             </ul>
         </div>
     </header>

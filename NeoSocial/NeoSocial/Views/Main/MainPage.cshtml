@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "MainPage";
+    Layout = "~/Views/Shared/_LayoutMainPage.cshtml";    
+}
+
+@using NeoSocial.Models;
+
+@{ 
+    
+    var postList = (List<CommonPost>)ViewData["postList"];
+
+    foreach(var post in postList)
+    {
+        <div id="postTemplate">
+        <h2>@post.PostHeader - @post.PostDate</h2>
+        <h2>@post.PostContent</h2>        
+        <h4>Like : @post.PostLikeCount Comment : @post.PostCommentID</h4>        
+        </div>
+        <br />
+    }
+    
+           
+        
+}
