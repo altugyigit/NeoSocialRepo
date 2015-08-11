@@ -119,31 +119,19 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CommonPost.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Content Include="Content\Css\mainpage.css" />
-    <Content Include="Content\Css\stylelogin.css" />
-    <Content Include="Content\Css\styleregister.css" />
+    <Content Include="Content\Css\main-page.css" />
+    <Content Include="Content\Css\style-login.css" />
+    <Content Include="Content\Css\style-register.css" />
     <Content Include="Content\Css\style.css" />
     <Content Include="Content\Image\bck.jpg" />
     <Content Include="Content\Image\bckmenu.jpg" />
-    <Content Include="Content\Image\icons.jpg" />
-    <Content Include="Content\Image\Icons\iconFamale.jpg" />
-    <Content Include="Content\Image\Icons\iconFamale2.jpg" />
-    <Content Include="Content\Image\Icons\iconFamale3.jpg" />
-    <Content Include="Content\Image\Icons\iconFamale4.jpg" />
-    <Content Include="Content\Image\Icons\iconFamale5.jpg" />
-    <Content Include="Content\Image\Icons\iconFamale6.jpg" />
-    <Content Include="Content\Image\Icons\iconMale.jpg" />
-    <Content Include="Content\Image\Icons\iconMale2.jpg" />
-    <Content Include="Content\Image\Icons\iconMale3.jpg" />
-    <Content Include="Content\Image\Icons\iconMale4.jpg" />
-    <Content Include="Content\Image\Icons\iconMale5.jpg" />
-    <Content Include="Content\Image\Icons\iconMale6.jpg" />
     <Content Include="Content\Image\menu_div.png" />
     <Content Include="Content\Image\menu_stip.png" />
     <Content Include="Global.asax" />
@@ -158,7 +146,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

@@ -1,7 +1,11 @@
-﻿@{
+﻿@model NeoSocial.Database.Models.UserRegister
+
+@{
     Layout = "~/Views/Shared/_LayoutRegister.cshtml";
     ViewBag.Title = "Register";
 }
+
+
 
 <!DOCTYPE html>
 <html>
@@ -10,6 +14,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7; IE=EmulateIE9">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+
+    
 </head>
 <body>
      @using (Html.BeginForm("Register","Register")){
@@ -22,7 +28,8 @@
         
     		<form id="contactform"> 
     			<p class="contact"><label for="name">İsim</label></p> 
-    			<input id="name" name="name" placeholder="Adınızı girin" required="" tabindex="1" type="text"> 
+                 @Html.TextBoxFor(model => model.Name )
+    			@*<input id="name" name="name" placeholder="Adınızı girin" required="" tabindex="1" type="text"> *@
 
                 <p class="contact"><label for="name">Soyisim</label></p> 
     			<input id="surname" name="name" placeholder="Soyadınızı girin" required="" tabindex="1" type="text"> 
@@ -78,7 +85,7 @@
             </select><br><br>
             
            
-            <input class="buttom" name="submit" id="submit" tabindex="5" value="Kaydı Tamamla" type="submit"> 	 
+            <input class="buttom" name="submit" id="submit" tabindex="5" value="Kaydı Tamamla" type="submit"  > 	 
    </form> 
      
              
@@ -87,5 +94,8 @@
 </div>
     </div>
      }
+    
+    
+
 </body>
 </html>
