@@ -3,29 +3,15 @@
     Layout = "~/Views/Shared/_LayoutMainPage.cshtml";    
 }
 
-@using NeoSocial.Models;
 @using NeoSocial.Database.Models;
 
 @{ 
-    
-    var postList = (List<CommonPost>)ViewData["postList"];
     var postDatabaseList = (List<ArticlePost>)ViewData["postDatabase"];
 
-    foreach(var post in postList)
-    {
-        <div class="postTemplate">
-            <img id="avatarImg" src=@ViewData["pathImage"] />
-            <div class="postContent">                
-                <h2>@post.PostHeader - @post.PostDate</h2>
-                <h2>@post.PostContent</h2>        
-                <h4>Like : @post.PostLikeCount Comment : @post.PostCommentID</h4>  
-            </div>      
-        </div>
-        <br />
-    }
     foreach(var post in postDatabaseList)
     {
         <div class="postTemplate">
+            <img id="avatarImg" src=@ViewData["pathImage"] />
             <div class="postContent">
                 <h2>@post.PostHeader - @post.PostDate</h2>
                 <h2>@post.PostContent</h2>        
