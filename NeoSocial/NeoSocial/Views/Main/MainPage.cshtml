@@ -4,11 +4,12 @@
 }
 
 @using NeoSocial.Models;
+@using NeoSocial.Database.Models;
 
 @{ 
     
     var postList = (List<CommonPost>)ViewData["postList"];
-    var postDatabaseList = (List<ArticlePostWeb>)ViewData["postDatabase"];
+    var postDatabaseList = (List<ArticlePost>)ViewData["postDatabase"];
 
     foreach(var post in postList)
     {

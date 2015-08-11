@@ -39,6 +39,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -111,7 +119,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\ArticlePostWeb.cs" />
     <Compile Include="Models\CommonPost.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -170,6 +177,10 @@
     <ProjectReference Include="..\NeoSocial.Business\NeoSocial.Business.csproj">
       <Project>{f16fb5da-e3ac-43b6-8f72-110eb7fd9d78}</Project>
       <Name>NeoSocial.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NeoSocial.Database\NeoSocial.Database.csproj">
+      <Project>{5e6bf755-ab50-4cce-bb1e-9fc83dffc69c}</Project>
+      <Name>NeoSocial.Database</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

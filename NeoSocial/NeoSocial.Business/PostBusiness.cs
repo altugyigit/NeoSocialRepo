@@ -34,5 +34,13 @@ namespace NeoSocial.Business
 
              return _articlePostList;
         }
+        public List<ArticlePost> getUserArticlePost()
+        {
+            List<ArticlePost> _articlePostList = new List<ArticlePost>();
+
+            _articlePostList.Add(new ArticlePost());
+
+            return _articlePostList;
+        }
     }
 }
