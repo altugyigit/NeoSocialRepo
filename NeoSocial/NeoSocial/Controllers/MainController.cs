@@ -1,10 +1,10 @@
-﻿using NeoSocial.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using NeoSocial.Business;
+using System.IO;
 
 namespace NeoSocial.Controllers
 {
@@ -13,20 +13,12 @@ namespace NeoSocial.Controllers
         //
         // GET: /Main/
 
-        public CommonPost articlePost = new CommonPost();
-
         public ActionResult MainPage()
-        {
-            List<CommonPost> postList = new List<CommonPost>();
-
-            postList.Add(new CommonPost() { PostID = 0, PostHeader="Güzel bir gün.", PostContent="Bugün çok mutluyum. :)", PostDate="10/08/2015", PostCommentID=0, PostLikeCount=0});
-            postList.Add(new CommonPost() { PostID = 0, PostHeader = "Berbat bir gün.", PostContent = "Allah kahretsin.", PostDate = "10/08/2015", PostCommentID = 0, PostLikeCount = 0 });
-            postList.Add(new CommonPost() { PostID = 0, PostHeader = "Hava güzel olunca", PostContent = "Hava güzel olunca piknik kaçmaz. :)", PostDate = "10/08/2015", PostCommentID = 0, PostLikeCount = 0 });
-
-            ViewData["postList"] = postList;
-
+        {            
             PostBusiness _postBusiness = new PostBusiness();
             ViewData["postDatabase"] = _postBusiness.getAllArticlePost();
+
+            ViewData["pathImage"] = "/Content/Image/Icons/iconFamale3.jpg";
 
             return View();
         }
