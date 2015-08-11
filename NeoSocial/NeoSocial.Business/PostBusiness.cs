@@ -17,6 +17,7 @@ namespace NeoSocial.Business
     public class PostBusiness : IPostBusiness
     {
         PostContext _postContext;
+        List<ArticlePost> _articlePostList;
 
         public PostBusiness()
         {
@@ -26,12 +27,7 @@ namespace NeoSocial.Business
         }
         public List<ArticlePost> getAllArticlePost()
         {
-             ArticlePost _articlePost = _postContext.ArticlePostRepository.Get().First();
-
-             List<ArticlePost> _articlePostList = new List<ArticlePost>();
-
-             _articlePostList.Add(_articlePost);
-
+            _articlePostList = _postContext.ArticlePostRepository.Get().OrderByDescending(x => x.PostID).ToList();
              return _articlePostList;
         }
         public List<ArticlePost> getUserArticlePost()
