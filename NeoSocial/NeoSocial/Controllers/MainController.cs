@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using NeoSocial.Business;
+using System.IO;
 
 namespace NeoSocial.Controllers
 {
@@ -27,6 +28,8 @@ namespace NeoSocial.Controllers
 
             PostBusiness _postBusiness = new PostBusiness();
             ViewData["postDatabase"] = _postBusiness.getAllArticlePost();
+
+            ViewData["pathImage"] = "/Content/Image/Icons/iconFamale3.jpg";
 
             return View();
         }
