@@ -8,17 +8,24 @@
 @{ 
     
     var postList = (List<CommonPost>)ViewData["postList"];
+    var postDatabaseList = (List<ArticlePostWeb>)ViewData["postDatabase"];
 
     foreach(var post in postList)
     {
-        <div id="postTemplate">
+        <div class="postTemplate" style="background-color:rgba(255, 255, 255, 0.50);border-radius:20px 20px;">
         <h2>@post.PostHeader - @post.PostDate</h2>
         <h2>@post.PostContent</h2>        
         <h4>Like : @post.PostLikeCount Comment : @post.PostCommentID</h4>        
         </div>
         <br />
     }
-    
-           
-        
+    foreach(var post in postDatabaseList)
+    {
+        <div class="postTemplate" style="background-color:rgba(255, 255, 255, 0.50);border-radius:20px 20px;">
+        <h2>@post.PostHeader - @post.PostDate</h2>
+        <h2>@post.PostContent</h2>        
+        <h4>Like : @post.PostLikeCount Comment : @post.PostCommentID</h4>        
+        </div>
+        <br />
+    }                  
 }

@@ -111,6 +111,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ArticlePostWeb.cs" />
     <Compile Include="Models\CommonPost.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -164,6 +165,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\User\ForgotPassword.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NeoSocial.Business\NeoSocial.Business.csproj">
+      <Project>{f16fb5da-e3ac-43b6-8f72-110eb7fd9d78}</Project>
+      <Name>NeoSocial.Business</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

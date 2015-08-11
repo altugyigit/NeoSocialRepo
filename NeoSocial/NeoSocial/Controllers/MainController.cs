@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using NeoSocial.Business;
 
 namespace NeoSocial.Controllers
 {
@@ -23,6 +24,9 @@ namespace NeoSocial.Controllers
             postList.Add(new CommonPost() { PostID = 0, PostHeader = "Hava güzel olunca", PostContent = "Hava güzel olunca piknik kaçmaz. :)", PostDate = "10/08/2015", PostCommentID = 0, PostLikeCount = 0 });
 
             ViewData["postList"] = postList;
+
+            PostBusiness _postBusiness = new PostBusiness();
+            ViewData["postDatabase"] = _postBusiness.getAllArticlePost();
 
             return View();
         }

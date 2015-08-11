@@ -11,7 +11,7 @@ using System.Data.Entity.Validation;
 
 namespace NeoSocial.Database.UnitOfWork
 {
-    public interface IUserContext : IRepository<UserLogin>
+    public interface IUserContext : IUnitOfWork
     {
 
         UserLoginRepository UserLoginRepository { get; }
@@ -32,13 +32,10 @@ namespace NeoSocial.Database.UnitOfWork
 
 
 
-        public UserContext(IDbContextFactory dbContextFactory) {
-
-
-            _dbContext = dbContextFactory.GetDbContext();
-        
-        
-      }
+        public UserContext(IDbContextFactory dbContextFactory) 
+        {
+            _dbContext = dbContextFactory.GetDbContext();                
+        }
 
         public void Commit()
         {
@@ -62,9 +59,6 @@ namespace NeoSocial.Database.UnitOfWork
                 throw new DbEntityValidationException(sb.ToString());
             }
         }
-
-
-
 
         public UserLoginRepository UserLoginRepository
         {

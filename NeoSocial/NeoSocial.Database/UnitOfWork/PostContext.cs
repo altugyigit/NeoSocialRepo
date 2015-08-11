@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using NeoSocial.Database.Repository;
 using System.Data.Entity;
-using NeoSocial.Database.Models.Repository;
+using NeoSocial.Database.Models;
 using System.Data.Entity.Validation;
 
 namespace NeoSocial.Database.IUnitOfWork
@@ -65,7 +65,7 @@ namespace NeoSocial.Database.IUnitOfWork
                 return _articlePostRepository;
             }
         }
-        public CommentRepository ArticlePostRepository
+        public CommentRepository CommentRepository
         {
             get
             {
