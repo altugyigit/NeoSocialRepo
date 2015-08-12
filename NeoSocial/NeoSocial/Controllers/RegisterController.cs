@@ -15,6 +15,7 @@ namespace NeoSocial.Controllers
         //
         // GET: /Register/
         RegisterBusiness b = new RegisterBusiness();
+
         
 
         public ActionResult Register()
@@ -23,12 +24,13 @@ namespace NeoSocial.Controllers
         }
 
 
-        [HttpPost]
+        [HttpPost,ValidateAntiForgeryToken]
         public ActionResult CreateUser(UserRegister model)
         {
             if (model.UserRegisterID == 0)
             {
-                b.InsertUser(model);
+                b.AddUser(model);
+                
               
             }
             else
