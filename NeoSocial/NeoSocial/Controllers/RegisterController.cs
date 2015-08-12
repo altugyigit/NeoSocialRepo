@@ -15,7 +15,7 @@ namespace NeoSocial.Controllers
         //
         // GET: /Register/
         RegisterBusiness b = new RegisterBusiness();
-
+        
         
 
         public ActionResult Register()

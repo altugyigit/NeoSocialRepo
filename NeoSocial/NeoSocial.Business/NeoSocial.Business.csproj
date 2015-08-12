@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="PostBusiness.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegisterBusiness.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NeoSocial.Database\NeoSocial.Database.csproj">
