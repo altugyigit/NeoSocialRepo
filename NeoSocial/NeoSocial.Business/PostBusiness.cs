@@ -32,7 +32,7 @@ namespace NeoSocial.Business
         }
         public List<ArticlePost> getUserArticlePost()
         {
-            List<ArticlePost> _articlePostList = new List<ArticlePost>();
+            _articlePostList = new List<ArticlePost>();
 
             _articlePostList.Add(new ArticlePost());
 
