@@ -146,6 +146,7 @@
     <Content Include="Content\Image\Icons\iconMale6.jpg" />
     <Content Include="Content\Image\menu_div.png" />
     <Content Include="Content\Image\menu_stip.png" />
+    <Content Include="Content\Image\neologo.png" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -198,9 +199,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_LayoutRegister.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Login\Login.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
