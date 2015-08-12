@@ -110,3 +110,11 @@ C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial\obj\Debug\Neo
 C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial\obj\Debug\NeoSocial.pdb
 C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial\bin\EntityFramework.SqlServer.dll
 C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial\bin\EntityFramework.SqlServer.xml
+C:\Users\Mert\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial\bin\EntityFramework.dll
+C:\Users\Mert\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial\bin\EntityFramework.SqlServer.dll
+C:\Users\Mert\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial\bin\NeoSocial.Business.dll
+C:\Users\Mert\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial\bin\NeoSocial.Database.dll
+C:\Users\Mert\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial\bin\NeoSocial.Business.pdb
+C:\Users\Mert\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial\bin\NeoSocial.Database.pdb
+C:\Users\Mert\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial\bin\EntityFramework.xml
+C:\Users\Mert\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial\bin\EntityFramework.SqlServer.xml

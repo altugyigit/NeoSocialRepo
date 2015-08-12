@@ -1,0 +1,10 @@
+C:\Users\Mert\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial.Business\bin\Debug\NeoSocial.Business.dll.config
+C:\Users\Mert\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial.Business\bin\Debug\NeoSocial.Business.dll
+C:\Users\Mert\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial.Business\bin\Debug\NeoSocial.Business.pdb
+C:\Users\Mert\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial.Business\bin\Debug\NeoSocial.Database.dll
+C:\Users\Mert\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial.Business\bin\Debug\EntityFramework.dll
+C:\Users\Mert\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial.Business\bin\Debug\NeoSocial.Database.pdb
+C:\Users\Mert\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial.Business\bin\Debug\EntityFramework.xml
+C:\Users\Mert\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial.Business\obj\Debug\NeoSocial.Business.csprojResolveAssemblyReference.cache
+C:\Users\Mert\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial.Business\obj\Debug\NeoSocial.Business.dll
+C:\Users\Mert\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial.Business\obj\Debug\NeoSocial.Business.pdb

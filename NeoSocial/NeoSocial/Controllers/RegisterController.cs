@@ -7,6 +7,8 @@ using NeoSocial.Database.Models;
 using NeoSocial.Database.Repository;
 using NeoSocial.Database.IUnitOfWork;
 using NeoSocial.Business;
+using NeoSocial.ViewModels;
+
 
 namespace NeoSocial.Controllers
 {
@@ -14,8 +16,7 @@ namespace NeoSocial.Controllers
     {
         //
         // GET: /Register/
-        RegisterBusiness b = new RegisterBusiness();
-        
+      
         
 
         public ActionResult Register()
@@ -24,27 +25,7 @@ namespace NeoSocial.Controllers
         }
 
 
-        [HttpPost,ValidateAntiForgeryToken]
-        public ActionResult CreateUser(UserRegister model)
-        {
-            if (model.UserRegisterID == 0)
-            {
-                b.AddUser(model);
-                
-              
-            }
-            else
-            {
-               
-                
-            }
-
-            if (model.UserRegisterID > 0)
-            {
-                return RedirectToAction("Index");
-            }
-            return View(model);
-        }
+       
 
     }
 }
