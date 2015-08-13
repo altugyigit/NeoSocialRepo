@@ -1,4 +1,4 @@
-﻿@model NeoSocial.Database.Models.UserRegister
+﻿@model NeoSocial.ViewModels.Register
 
 @{
     Layout = "~/Views/Shared/_LayoutRegister.cshtml";
@@ -20,8 +20,9 @@
 <body>
      @using (Html.BeginForm("Register","Register",FormMethod.Post)){
          
-          @Html.AntiForgeryToken()
-    @Html.ValidationSummary()
+         @Html.AntiForgeryToken();
+         
+          
 <div class="container">
 			<header>
 				<h1> Kayıt Ol</h1>
@@ -29,65 +30,47 @@
      
       <div  class="form">
     		<form id="contactform"> 
-    			 @Html.LabelFor(Model=> Model.Name)
-                 @Html.TextBoxFor(model => model.Name, new {@class="form-control" } )
-    			@*<input id="name" name="name" placeholder="Adınızı girin" required="" tabindex="1" type="text"> 
+    			 @Html.LabelFor(model=>model.register.Name)
+                 @Html.TextBoxFor(model=>model.register.Name, new {@class="form-control" } )
+    			
 
-                <p class="contact"><label for="name">Soyisim</label></p> 
-    			<input id="surname" name="name" placeholder="Soyadınızı girin" required="" tabindex="1" type="text"> 
-    			 
-    			<p class="contact"><label for="email">Email</label></p> 
-    			<input id="email" name="email" placeholder="ornek@domain.com" required="" type="email"> 
-                
-                <p class="contact"><label for="username">Kullanıcı Adı</label></p> 
-    			<input id="username" name="username" placeholder="Kullanıcı adınızı girin" required="" tabindex="2" type="text"> 
-    			 
-                <p class="contact"><label for="password">Şifrenizi girin</label></p> 
-    			<input type="password" id="password" name="password" required=""> 
-                <p class="contact"><label for="repassword">Şifrenizi onaylayın</label></p> 
-    			<input type="password" id="repassword" name="repassword" required=""> 
-        
-                <fieldset>
-                    <label>Doğum Tarihi</label>
-                    <label class="month">
-                        <select class="select-style" name="BirthMonth">
-                            <option value="01">Ocak</option>
-                            <option value="02">Şubat</option>
-                            <option value="03">Mart</option>
-                            <option value="04">Nisan</option>
-                            <option value="05">Mayıs</option>
-                            <option value="06">Haziran</option>
-                            <option value="07">Temmuz</option>
-                            <option value="08">Ağustos</option>
-                            <option value="09">Eylül</option>
-                            <option value="10">Ekim</option>
-                            <option value="11">Kasım</option>
-                            <option value="12">Aralık</option>
+                @Html.LabelFor(model=>model.register.Surname)
+                 @Html.TextBoxFor(model=>model.register.Surname, new {@class="form-control" } )
+    			
+    			@Html.LabelFor(model=>model.register.Email)
+                 @Html.TextBoxFor(model=>model.register.Email, new {@class="form-control", type = "email" })
+                 
+               @Html.LabelFor(model=>model.login.UserName)
+                 @Html.TextBoxFor(model=>model.login.UserName, new {@class="form-control" } )
+    			
+                @Html.LabelFor(model=>model.login.UserPassword)
+                 @Html.TextBoxFor(model=>model.login.UserPassword, new {@class="form-control",type="password" } )
 
-                        </select>  
-                    </label>
-                     
-                    <label>Gün<input class="birthday" maxlength="2" name="BirthDay" placeholder="Gün" required=""></label>
-                    <label>Yıl
-                        <input class="birthyear" maxlength="4" name="BirthYear" placeholder="Yıl" required=""></label>
-                </fieldset>
-  
-            <select class="select-style gender" name="gender" >
-            <option value="m">Erkek</option>
-            <option value="f">Kadın</option>
 
-            </select><br><br>
-                <label>Ülke</label><br />
-                <select class="select-style gender" name="Country" >
-            
-            </select><br><br>
-                <label>Şehir</label><br />
-                <select class="select-style gender" name="Province" >
-          
-            </select><br><br>
+                   @Html.LabelFor(model=>model.login.UserPassword)
+                 @Html.TextBox("repassword","repassword", new {@class="form-control",type="password" })
+
+
+                 @Html.LabelFor(model=>model.register.BirthDate)
+                 @Html.TextBoxFor(model=>model.register.BirthDate,"{0:d MMM yyyy}", new {@class="form-control",type="date" } )
+
+
+                 @Html.LabelFor(model=>model.register.Gender)
+             @* @Html.DropDownListFor(tuple =>tuple.Item1.Gender
+
+
             *@
-           
-            <input class="buttom" name="submit" id="submit" tabindex="5" value="Kaydı Tamamla" type="submit"  > 	 
+                @Html.LabelFor(model=>model.country.CountryName)
+                @*@Html.DropDownListFor(tuple=>tuple.Item3.CountryName
+                *@
+               
+                 @Html.LabelFor(model=>model.city.CityName)
+                @*@Html.DropDownListFor(tuple=>tuple.Item4.CityName
+                
+                *@
+                
+                
+                <input class="buttom" name="submit" id="submit" tabindex="5" value="Kaydı Tamamla" type="submit"  > 	 
    </form> 
      
              
