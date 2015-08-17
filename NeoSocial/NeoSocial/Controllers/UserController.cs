@@ -6,14 +6,20 @@ using System.Web.Mvc;
 
 namespace NeoSocial.Controllers
 {
+    [Authorize]
     public class UserController : Controller
     {
         //
         // GET: /Login/
-
+        [AllowAnonymous]
         public ActionResult Login()
         {
-            return View();
+            if (String.IsNullOrEmpty(HttpContext.User.Identity.Name))
+            {
+                return View();
+            }
+            
+            return Redirect("~/Home/Index");
         }
 
         public ActionResult ForgotPassword()
