@@ -13,6 +13,7 @@ namespace NeoSocial.Business
 {
     interface ILoginBusiness {
 
+        bool verifyUser(UserLogin _userLogin);
         void addUser(UserLogin _userLogin);
     
     }
@@ -22,24 +23,35 @@ namespace NeoSocial.Business
   public  class LoginBusiness :ILoginBusiness
 {
 
- UserContext _userContext;
+        UserContext _userContext;
 
- public LoginBusiness() {
+        public LoginBusiness() 
+        {
+            _userContext = new UserContext(new DbContextFactory());
+        }
 
-     _userContext = new UserContext(new DbContextFactory());
- 
- 
- }
+        public   void addUser(UserLogin _userLogin)      
+        {
+            _userContext.UserLoginRepository.Create(_userLogin);
+            _userContext.Commit();
+        }
 
-   public   void addUser(UserLogin _userLogin)
-      
-     {
-         _userContext.UserLoginRepository.Create(_userLogin);
-         _userContext.Commit();
-      
-      
-      }
+        public bool verifyUser(UserLogin _userLogin)
+        {
+            string _userNameText = _userLogin.UserName;
+            string _userPasswordText = _userLogin.UserPassword;
 
+            try
+            {
+                _userContext.UserLoginRepository.Find(a => a.UserName == _userNameText && a.UserPassword == _userPasswordText);
 
+                return true;
+            }
+            catch(ArgumentNullException ex)
+            {
+                return false;
+            }
+            
+        }
     }
 }
