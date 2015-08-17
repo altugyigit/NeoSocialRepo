@@ -4,7 +4,7 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
-    <link rel="stylesheet" type="text/css" href="~/Content/Css/style-register.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/Css/styleregister.css" />
 </head>
 <body>
     
@@ -12,5 +12,12 @@
         @RenderBody()
     </div>
    
+
+    <script type="text/javascript">
+        $("#submit").click(function () {
+            var form = $("form#contactform");
+            form.attr("action", "@Url.Action("CreateUser","Register")");
+            form.submit();
+        }); </script>
 </body>
 </html>

@@ -23,6 +23,7 @@ namespace NeoSocial.Controllers
 
         public ActionResult Register() {
 
+
             return View();
         
         
@@ -30,7 +31,7 @@ namespace NeoSocial.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Register(Register model)
+        public ActionResult Register(ViewModel model)
         {
             _registerBusiness = new RegisterBusiness();
             _loginBusiness = new LoginBusiness();
@@ -39,6 +40,8 @@ namespace NeoSocial.Controllers
 
             model.register.BirthDate = dt.ToShortDateString();
             
+           
+
             _registerBusiness.addUser(model.register);
             _loginBusiness.addUser(model.login);
             return View();

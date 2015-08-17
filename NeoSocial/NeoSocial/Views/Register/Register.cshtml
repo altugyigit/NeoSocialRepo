@@ -1,4 +1,4 @@
-﻿@model NeoSocial.ViewModels.Register
+﻿@model NeoSocial.ViewModels.ViewModel
 
 @{
     Layout = "~/Views/Shared/_LayoutRegister.cshtml";
@@ -30,41 +30,55 @@
      
       <div  class="form">
     		<form id="contactform"> 
-    			 @Html.LabelFor(model=>model.register.Name)
-                 @Html.TextBoxFor(model=>model.register.Name, new {@class="form-control" } )
+    			 @Html.Label("İsim")<br /><br />
+
+                 @Html.TextBoxFor(model=>model.register.Name, new {@class="form-control" } )<br />
     			
 
-                @Html.LabelFor(model=>model.register.Surname)
-                 @Html.TextBoxFor(model=>model.register.Surname, new {@class="form-control" } )
+                @Html.Label("Soyisim")<br /><br />
+
+                 @Html.TextBoxFor(model=>model.register.Surname, new {@class="form-control" } )<br />
     			
-    			@Html.LabelFor(model=>model.register.Email)
-                 @Html.TextBoxFor(model=>model.register.Email, new {@class="form-control", type = "email" })
+    			 @Html.Label("Email")<br /><br />
+
+                 @Html.TextBoxFor(model=>model.register.Email, new {@class="form-control", type = "email" })<br />
                  
-               @Html.LabelFor(model=>model.login.UserName)
-                 @Html.TextBoxFor(model=>model.login.UserName, new {@class="form-control" } )
+               @Html.Label("Kullanıcı Adı")<br /><br />
+
+                 @Html.TextBoxFor(model=>model.login.UserName, new {@class="form-control" } )<br />
     			
-                @Html.LabelFor(model=>model.login.UserPassword)
-                 @Html.TextBoxFor(model=>model.login.UserPassword, new {@class="form-control",type="password" } )
+                @Html.Label("Şifre")<br /><br />
+
+                 @Html.TextBoxFor(model=>model.login.UserPassword, new {@class="form-control",type="password" } )<br />
 
 
-                   @Html.LabelFor(model=>model.login.UserPassword)
-                 @Html.TextBox("repassword","repassword", new {@class="form-control",type="password" })
+                   @Html.Label("Şifreyi tekrar girin")<br /><br />
+
+                 @Html.TextBox("repassword","repassword", new {@class="form-control",type="password" })<br />
 
 
-                 @Html.LabelFor(model=>model.register.BirthDate)
-                 @Html.TextBoxFor(model=>model.register.BirthDate, new { @class="form-control",type="date" })
+                 @Html.Label("Doğum Tarihi")<br /><br />
+
+                 @Html.TextBoxFor(model=>model.register.BirthDate, new { @class="form-control",type="date" })<br />
                 
 
-                 @Html.LabelFor(model=>model.register.Gender)
-             @* @Html.DropDownListFor(tuple =>tuple.Item1.Gender
+                 @Html.Label("Cinsiyet")<br />
+             @Html.DropDownListFor(model=>model.register.Gender,new SelectList( new List<Object>{ 
+                       new { value = 0 , text = "Kadın"  },
+                       new { value = 1 , text = "Erkek" }
+                      
+                    },
+                  "value",
+                  "text",
+                     2),new { @class="form-control"})<br />
 
 
-            *@
-                @Html.LabelFor(model=>model.country.CountryName)
+            
+                @Html.LabelFor(model=>model.country.CountryName)<br /><br />
                 @*@Html.DropDownListFor(tuple=>tuple.Item3.CountryName
                 *@
                
-                 @Html.LabelFor(model=>model.city.CityName)
+                 @Html.LabelFor(model=>model.city.CityName)<br /><br />
                 @*@Html.DropDownListFor(tuple=>tuple.Item4.CityName
                 
                 *@
