@@ -10,12 +10,14 @@
 			<div class="app-title">
 				<img src="~/Content/Image/neologo.png" /> 
 			</div>
+
+            @Html.ValidationSummary(false, "", new { style="color:Red;" })
             
             @using (Html.BeginForm("Login", "User", FormMethod.Post))
             {
                 <div class="login-form">
 				<div class="control-group">
-				@Html.TextBoxFor(a => a.login.UserName, new {id = "login-name", @class = "login-field", @required = "required", @maxlength="15", @})
+				@Html.TextBoxFor(a => a.login.UserName, new {id = "login-name", @class = "login-field", @required = "required", @maxlength="15"})
 				<label class="login-field-icon fui-user" for="login-name"></label>
 				</div>
 
@@ -23,7 +25,7 @@
 				@Html.TextBoxFor(a => a.login.UserPassword, new {id = "login-pass", @class = "login-field", @required = "required", type="password"})
 				<label class="login-field-icon fui-lock" for="login-pass"></label>
 				</div>
-                <br />
+                <br />          
 				<input type="submit" class="btn btn-primary btn-large btn-block" value="Login"/>
                 <br />
 				 @Html.ActionLink("Şifremi Unuttum","ForgotPassword", "User")
