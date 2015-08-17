@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CountryBusiness.cs" />
     <Compile Include="LoginBusiness.cs" />
     <Compile Include="PostBusiness.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

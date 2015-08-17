@@ -62,7 +62,7 @@
                  @Html.TextBoxFor(model=>model.register.BirthDate, new { @class="form-control",type="date" })<br />
                 
 
-                 @Html.Label("Cinsiyet")<br />
+                 @Html.Label("Cinsiyet")<br /><br />
              @Html.DropDownListFor(model=>model.register.Gender,new SelectList( new List<Object>{ 
                        new { value = 0 , text = "Kadın"  },
                        new { value = 1 , text = "Erkek" }
@@ -75,14 +75,10 @@
 
             
                 @Html.LabelFor(model=>model.country.CountryName)<br /><br />
-                @*@Html.DropDownListFor(tuple=>tuple.Item3.CountryName
-                *@
+               @Html.DropDownListFor(model=>model.register.CountryID,new SelectList((System.Collections.IEnumerable) ViewData["country"], "CountryID", "CountryName"),new { @class="form-control"})<br />
                
-                 @Html.LabelFor(model=>model.city.CityName)<br /><br />
-                @*@Html.DropDownListFor(tuple=>tuple.Item4.CityName
-                
-                *@
-                
+               
+                 
                 
                 <input class="buttom" name="submit" id="submit" tabindex="5" value="Kaydı Tamamla" type="submit"  > 	 
    </form> 

@@ -16,12 +16,15 @@ namespace NeoSocial.Controllers
     {
         //
         // GET: /Register/
-
+        CountryBusiness _countryBusiness;
         RegisterBusiness _registerBusiness;
         LoginBusiness _loginBusiness;
-
+        
+        
 
         public ActionResult Register() {
+            _countryBusiness = new CountryBusiness();
+            ViewData["country"] = _countryBusiness.getAllCountry();
 
 
             return View();
