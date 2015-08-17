@@ -1,4 +1,5 @@
-﻿@{
+﻿@model NeoSocial.ViewModels.LoginModel
+@{
     Layout = "~/Views/Shared/_LayoutLogin.cshtml";
     ViewBag.Title = "Login";
 }
@@ -10,18 +11,20 @@
 				<img src="~/Content/Image/neologo.png" /> 
 			</div>
             
-			<div class="login-form">
+            @using (Html.BeginForm("Login", "User", FormMethod.Post))
+            {
+                <div class="login-form">
 				<div class="control-group">
-				<input type="text" class="login-field" value="" id="login-name">
+				@Html.TextBoxFor(a => a.userLogin.UserName, new {id = "login-name", @class = "login-field", @required = "required"})
 				<label class="login-field-icon fui-user" for="login-name"></label>
 				</div>
 
 				<div class="control-group">
-				<input type="password" class="login-field" value="" id="login-pass">
+				@Html.TextBoxFor(a => a.userLogin.UserName, new {id = "login-pass", @class = "login-field", @required = "required", type="password"})<input type="password" class="login-field" value="" id="login-pass">
 				<label class="login-field-icon fui-lock" for="login-pass"></label>
 				</div>
                 <br />
-				<a class="btn btn-primary btn-large btn-block" href="#">Login</a>
+				<input type="submit" class="btn btn-primary btn-large btn-block" value="Login"/>
                 <br />
 				 @Html.ActionLink("Şifremi Unuttum","ForgotPassword", "User")
 
@@ -29,5 +32,7 @@
 
                  @Html.ActionLink("Üye ol","Register","Register")
 			</div>
+            } 
+		
 		</div>
 	</div>
