@@ -29,12 +29,15 @@ namespace NeoSocial.Controllers
 
         [AllowAnonymous]
         [HttpPost]
-        public ActionResult Login(LoginModel  )
+        public ActionResult Login(ViewModel viewModel)
         {
             _loginBusiness = new LoginBusiness();
 
 
-            return View();
+            Session["UserName"] = viewModel.login.UserName.ToString();
+            Session["Password"] = viewModel.login.UserPassword.ToString();
+
+            return Redirect("~/Home/Index");
         }
 
         public ActionResult ForgotPassword()

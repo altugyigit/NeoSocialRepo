@@ -12,18 +12,10 @@ namespace NeoSocial.ViewModels
 {
     public class ViewModel
     {
-
-      
         public UserRegister register { get; set; }
         public UserLogin login { get; set; }
         public Country country { get; set; }
         public TurkeyCity city { get; set; }
-
-     
-         
     }
-
     
-
-
 }
