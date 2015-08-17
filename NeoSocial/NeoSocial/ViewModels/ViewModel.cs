@@ -20,7 +20,7 @@ namespace NeoSocial.ViewModels
         public TurkeyCity city { get; set; }
 
      
-
+         
     }
 
     
