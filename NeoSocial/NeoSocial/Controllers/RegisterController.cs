@@ -34,7 +34,11 @@ namespace NeoSocial.Controllers
         {
             _registerBusiness = new RegisterBusiness();
             _loginBusiness = new LoginBusiness();
-           
+
+            DateTime dt = Convert.ToDateTime(model.register.BirthDate);
+
+            model.register.BirthDate = dt.ToShortDateString();
+            
             _registerBusiness.addUser(model.register);
             _loginBusiness.addUser(model.login);
             return View();

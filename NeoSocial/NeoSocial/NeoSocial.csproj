@@ -113,8 +113,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MainController.cs" />
+    <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
@@ -130,6 +130,7 @@
     <Content Include="Content\Css\mainpage.css" />
     <Content Include="Content\Css\style.css" />
     <Content Include="Content\Css\stylelogin.css" />
+    <Content Include="Content\Css\styleprofile.css" />
     <Content Include="Content\Css\styleregister.css" />
     <Content Include="Content\Image\bck.jpg" />
     <Content Include="Content\Image\bckmenu.jpg" />
@@ -200,6 +201,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Register\Register.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Profile\Profile.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_LayoutProfile.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\neosocial.pubxml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
