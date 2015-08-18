@@ -18,8 +18,6 @@ namespace NeoSocial.Business
     
     }
 
-
-
   public  class LoginBusiness :ILoginBusiness
 {
 
@@ -50,7 +48,6 @@ namespace NeoSocial.Business
             {
                 return false;
             }
-            
         }
     }
 }
