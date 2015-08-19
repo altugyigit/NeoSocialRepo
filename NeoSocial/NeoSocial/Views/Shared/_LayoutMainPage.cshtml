@@ -10,17 +10,13 @@
     <header>
         @RenderSection("Header", false)        
         <div id="menu">
-            <ul>
-                <li><b>@Html.ActionLink("Profil","Profile", "Profile")</b></li>
-                <li><b>@Html.ActionLink("Yazı Paylaş","Index", "Home")</b></li>                
-            </ul>
+            @Html.ActionLink("Profile", "Profile", "Profile", new { id="btn" })
+            @Html.ActionLink("Share Article","Index", "Home", new { id="btn" })     
+            @Html.ActionLink("Log Out", "LogOut", "User", new { id="btn" })        
         </div>
     </header>
     <div id="content">
         @RenderBody()
     </div>
-    <footer>
-        @RenderSection("Footer", false)
-    </footer>
 </body>
 </html>
