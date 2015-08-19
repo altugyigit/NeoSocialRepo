@@ -6,7 +6,6 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
-using NeoSocial.Models;
 
 namespace NeoSocial.Controllers
 {
@@ -53,7 +52,7 @@ namespace NeoSocial.Controllers
             
         }
 
-        [_SessionControl]
+        [Authorize]
         public ActionResult LogOut()
         {
             FormsAuthentication.SignOut();
