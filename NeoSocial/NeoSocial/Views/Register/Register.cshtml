@@ -70,17 +70,28 @@
                     },
                   "value",
                   "text",
-                     2),new { @class="form-control"})<br />
+                     2),new { @class="form-control"})<br /><br />
 
 
             
-                @Html.LabelFor(model=>model.country.CountryName)<br /><br />
+            @*    @Html.LabelFor(model=>model.country.CountryName)<br /><br />
                @Html.DropDownListFor(model=>model.register.CountryID,new SelectList((System.Collections.IEnumerable) ViewData["country"], "CountryID", "CountryName"),new { @class="form-control"})<br />
-               
+               *@
                
                  
                 
                 <input class="buttom" name="submit" id="submit" tabindex="5" value="Kaydı Tamamla" type="submit"  > 	 
+
+                @if(TempData["true"]!=null) {
+                    <script type="text/javascript">
+                        alert("@TempData["true"]");
+                      </script>
+                }
+                @if(TempData["false"]!=null) {
+                <script type="text/javascript">
+                    alert("@TempData["false"]");
+                      </script>
+                }
    </form> 
      
              

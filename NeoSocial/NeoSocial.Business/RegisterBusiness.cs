@@ -15,6 +15,7 @@ namespace NeoSocial.Business
 
         //List<UserRegister> getAllUsers();
         void addUser(UserRegister userRegister);
+        bool checkUser(UserLogin userLogin);
     
     }
 
@@ -37,6 +38,25 @@ namespace NeoSocial.Business
           _userContext.Commit();
 
       }
+
+      public bool checkUser(UserLogin userLogin) {
+
+          string _userNameText = userLogin.UserName;
+          string _userPasswordText = userLogin.UserPassword;
+
+          if (_userContext.UserLoginRepository.Find(a => a.UserName == _userNameText) != null && !_userNameText.Equals(_userPasswordText))
+          {
+              return true;
+          }
+          else
+          {
+              return false;
+          }
+      
+      
+      }
+
+
     }
 
 }

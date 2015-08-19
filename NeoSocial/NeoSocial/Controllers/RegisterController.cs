@@ -40,13 +40,22 @@ namespace NeoSocial.Controllers
             _loginBusiness = new LoginBusiness();
 
             DateTime dt = Convert.ToDateTime(model.register.BirthDate);
-
-            model.register.BirthDate = dt.ToShortDateString();
-            
            
+            model.register.BirthDate = dt.ToShortDateString();
 
-            _registerBusiness.addUser(model.register);
-            _loginBusiness.addUser(model.login);
+            if (!_registerBusiness.checkUser(model.login))//Kullanıcı yoksa ekle.
+            {
+                _registerBusiness.addUser(model.register);
+                _loginBusiness.addUser(model.login);
+                TempData["true"] ="kaydınız alınmıştır'" ;
+            }
+
+            else {
+                TempData["false"] = "kullanıcı adı daha önceden alınmış ya da kullanıcı adınızla şifreniz aynı" ;
+            
+            }
+
+          
             return View();
         }
        
