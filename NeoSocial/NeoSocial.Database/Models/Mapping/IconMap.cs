@@ -11,10 +11,13 @@ namespace NeoSocial.Database.Models.Mapping
             this.HasKey(t => t.IconID);
 
             // Properties
+            this.Property(t => t.IconPath)
+                .HasMaxLength(500);
+
             // Table & Column Mappings
             this.ToTable("Icon");
             this.Property(t => t.IconID).HasColumnName("IconID");
-            this.Property(t => t.Icon1).HasColumnName("Icon");
+            this.Property(t => t.IconPath).HasColumnName("IconPath");
         }
     }
 }

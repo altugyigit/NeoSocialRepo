@@ -40,7 +40,7 @@ namespace NeoSocial.Business
             string _userPasswordText = _userLogin.UserPassword;
 
             //Repository ile login bilgilerini kontrol et ve aynı zamanda şifre ve kullanıcı adının farklı olmasına dikkat et.
-            if(_userContext.UserLoginRepository.Find(a => a.UserName == _userNameText) != null && !_userNameText.Equals(_userPasswordText))
+            if(_userContext.UserLoginRepository.Find(a => a.UserName == _userNameText && a.UserPassword == _userPasswordText) != null && !_userNameText.Equals(_userPasswordText))
             {
                 return true;
             }

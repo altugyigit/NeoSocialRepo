@@ -12,7 +12,7 @@ namespace NeoSocial.Controllers
     {
         //
         // GET: /Home/
-        [_SessionControl]
+        [Authorize]
         public ActionResult Index()
         {
             return View();
