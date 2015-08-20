@@ -12,6 +12,7 @@ using NeoSocial.ViewModels;
 
 namespace NeoSocial.Controllers
 {
+    [Authorize]
     public class RegisterController : Controller
     {
         //
@@ -19,9 +20,9 @@ namespace NeoSocial.Controllers
         CountryBusiness _countryBusiness;
         RegisterBusiness _registerBusiness;
         LoginBusiness _loginBusiness;
-        
-        
 
+
+        [AllowAnonymous]
         public ActionResult Register() {
             _countryBusiness = new CountryBusiness();
             ViewData["country"] = _countryBusiness.getAllCountry();
@@ -31,7 +32,7 @@ namespace NeoSocial.Controllers
         
         
         }
-
+        [AllowAnonymous]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Register(ViewModel model)
@@ -55,6 +56,7 @@ namespace NeoSocial.Controllers
 
                 _loginBusiness.addUser(model.login);
                 TempData["true"] ="kaydınız alınmıştır'" ;
+                return Redirect("~/Views/User/Login");
             }
 
             else {
