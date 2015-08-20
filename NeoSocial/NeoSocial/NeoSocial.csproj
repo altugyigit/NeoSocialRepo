@@ -133,6 +133,7 @@
     <Content Include="Content\Css\styleprofile.css" />
     <Content Include="Content\Css\styleregister.css" />
     <Content Include="Content\Image\bck.jpg" />
+    <Content Include="Content\Image\bckmain.jpg" />
     <Content Include="Content\Image\bckmenu.jpg" />
     <Content Include="Content\Image\Icons\iconFamale.jpg" />
     <Content Include="Content\Image\Icons\iconFamale2.jpg" />

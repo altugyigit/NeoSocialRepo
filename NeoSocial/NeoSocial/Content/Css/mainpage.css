@@ -1,6 +1,9 @@
 ﻿body 
 {
-    background-image: url(/Content/Image/bck.jpg);
+    background-image: url(/Content/Image/bckmain.jpg);
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
     text-align:left;
 }
 header 

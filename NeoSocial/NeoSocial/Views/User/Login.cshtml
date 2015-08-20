@@ -28,11 +28,9 @@
                 <br />          
 				<input type="submit" class="btn btn-primary btn-large btn-block" value="Login"/>
                 <br />
-				 @Html.ActionLink("Şifremi Unuttum","ForgotPassword", "User")
-
-                @Html.ActionLink("Index' e git.","Index", "Home")
-
-                 @Html.ActionLink("Üye ol","Register","Register")
+                @Html.ActionLink("Sign Up", "Register", "Register", new { @class="btn btn-primary btn-large btn-block" })
+                <br />
+				@Html.ActionLink("Forgot my password", "ForgotPassword", "User")                
 			</div>
             } 
 		

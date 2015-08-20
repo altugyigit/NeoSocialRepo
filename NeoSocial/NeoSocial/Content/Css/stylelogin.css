@@ -7,7 +7,8 @@ box-sizing: border-box;
 }
 body {
 background-image: url(/Content/Image/bck.jpg);
-background-size:auto;
+background-size:cover;
+background-repeat:no-repeat;
 background-position:center;
 font-family: Arial;
 padding: 50px;
@@ -25,10 +26,9 @@ width: 400px;
 height:720px;
 }
 .login-screen {
-background-color: #FFF;
+background-color: rgba(255, 255, 255, 0.68);
 padding: 20px;
 border-radius: 10px;
-border:2px solid rgba(14, 255, 248, 0.79);
 }
 
 .app-title {
