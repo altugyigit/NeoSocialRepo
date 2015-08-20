@@ -3,13 +3,15 @@ http://www.freshdesignweb.com/beautiful-registration-form-with-html5-and-css3.ht
 */
 
 .form{
-        background-image: url(/Content/Image/bgnoise_lg.png);
-	background:#f1f1f1; width:470px; margin:0 auto; padding-left:50px; padding-top:20px;
+        
+	background-color: #FFF; width:470px; margin:0 auto; padding-left:50px; padding-top:20px;
 }
 
 body {
 
-     background-image: url(/Content/Image/bgnoise_lg.png);
+     background-image: url(/Content/Image/bck.jpg);
+     background-size:auto;
+     background-position:center;
 
 }
 
@@ -23,7 +25,16 @@ body {
 .form input.birthyear{width:120px;}
 .form label { color: #000; font-weight:bold;font-size: 12px;font-family:Arial, Helvetica; }
 .form label.month {width: 135px;}
-.form input, textarea { background-color: rgba(255, 255, 255, 0.4); border: 1px solid rgba(122, 192, 0, 0.15); padding: 7px; font-family: Keffeesatz, Arial; color: #4b4b4b; font-size: 14px; -webkit-border-radius: 5px; margin-bottom: 15px; margin-top: -10px; }
+.form input, textarea { text-align: center;
+                        background-color: #ECF0F1;
+                        border: 2px solid transparent;
+                        border-radius: 3px;
+                        font-size: 16px;
+                        font-weight: 200;
+                        padding: 10px 0;
+                        -webkit-border-radius: 5px; 
+                        margin-bottom: 15px; 
+                        margin-top: -10px; }
 .form input:focus, textarea:focus { border: 1px solid #ff5400; background-color: rgba(255, 255, 255, 1); }
 .form .select-style {
   -webkit-appearance: button;
