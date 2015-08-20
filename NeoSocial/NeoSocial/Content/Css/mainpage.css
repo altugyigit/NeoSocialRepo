@@ -21,7 +21,7 @@ header
 {
     text-align:center;
 }
-#btn 
+.btn 
 {
   margin-top:3%;
   border: 2px solid transparent;
@@ -40,7 +40,7 @@ header
   height:2%;
 }
 
-#btn:hover 
+.btn:hover 
 {
   background-color: #2980B9;
 }

@@ -6,11 +6,12 @@ using System.Web.Mvc;
 
 namespace NeoSocial.Controllers
 {
+    [Authorize]
     public class ProfileController : Controller
     {
         //
         // GET: /Profile/
-
+        [Authorize]
         public ActionResult Profile()
         {
             return View();

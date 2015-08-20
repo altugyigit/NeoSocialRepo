@@ -59,6 +59,7 @@ namespace NeoSocial.Controllers
             return RedirectToAction("Login", "User");
         }
 
+        [Authorize]
         public ActionResult ForgotPassword()
         {
             return View();

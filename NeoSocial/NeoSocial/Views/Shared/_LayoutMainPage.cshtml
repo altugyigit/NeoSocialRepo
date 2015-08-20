@@ -10,9 +10,9 @@
     <header>
         @RenderSection("Header", false)        
         <div id="menu">
-            @Html.ActionLink("Profile", "Profile", "Profile", new { id="btn" })
-            @Html.ActionLink("Share Article","Index", "Home", new { id="btn" })     
-            @Html.ActionLink("Log Out", "LogOut", "User", new { id="btn" })        
+            @Html.ActionLink("Profile", "Profile", "Profile", new { @class="btn" })
+            @Html.ActionLink("Share Article","Profile", "Profile", new { @class="btn" })     
+            @Html.ActionLink("Log Out", "LogOut", "Main", new { @class="btn" })        
         </div>
     </header>
     <div id="content">
