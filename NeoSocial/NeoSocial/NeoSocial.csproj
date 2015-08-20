@@ -148,6 +148,7 @@
     <Content Include="Content\Image\menu_div.png" />
     <Content Include="Content\Image\menu_stip.png" />
     <Content Include="Content\Image\neologo.png" />
+    <Content Include="Content\Image\sad.png" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

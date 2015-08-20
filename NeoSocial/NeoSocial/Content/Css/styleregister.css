@@ -4,13 +4,15 @@ http://www.freshdesignweb.com/beautiful-registration-form-with-html5-and-css3.ht
 
 .form{
         
-	background-color: #FFF; width:470px; margin:0 auto; padding-left:50px; padding-top:20px;
+	background-color: rgba(255, 255, 255, 0.68); width:470px; margin:0 auto; padding-left:50px; padding-top:20px;
 }
 
 body {
 
      background-image: url(/Content/Image/bck.jpg);
-     background-size:auto;
+     background-size:cover;
+     background-repeat:no-repeat;
+     background-attachment: fixed;
      background-position:center;
 
 }

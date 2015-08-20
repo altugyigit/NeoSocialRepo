@@ -27,11 +27,11 @@
      
       <div  class="form">
     		<form id="contactform"> 
-    			 @Html.Label("İsim")<br /><br />
+    			 @Html.Label("Name")<br /><br />
 
                  @Html.TextBoxFor(model=>model.register.Name, new {@class="form-control" } )<br />
   
-                @Html.Label("Soyisim")<br /><br />
+                @Html.Label("Surname")<br /><br />
 
                  @Html.TextBoxFor(model=>model.register.Surname, new {@class="form-control" } )<br />
     			
@@ -39,29 +39,29 @@
 
                  @Html.TextBoxFor(model=>model.register.Email, new {@class="form-control", type = "email" })<br />
                  
-               @Html.Label("Kullanıcı Adı")<br /><br />
+               @Html.Label("User Name")<br /><br />
 
                  @Html.TextBoxFor(model=>model.login.UserName, new {@class="form-control" } )<br />
     			
-                @Html.Label("Şifre")<br /><br />
+                @Html.Label("Password")<br /><br />
 
                  @Html.TextBoxFor(model=>model.login.UserPassword, new {@class="form-control",type="password" } )<br />
 
 
-                   @Html.Label("Şifreyi tekrar girin")<br /><br />
+                   @Html.Label("Again Password")<br /><br />
 
                  @Html.TextBox("repassword","", new {@class="form-control",type="password" })<br />
 
 
-                 @Html.Label("Doğum Tarihi")<br /><br />
+                 @Html.Label("Birth Date")<br /><br />
 
                  @Html.TextBoxFor(model=>model.register.BirthDate, new { @class="form-control",type="date" })<br />
                 
 
-                 @Html.Label("Cinsiyet")<br /><br />
+                 @Html.Label("Gender")<br /><br />
              @Html.DropDownListFor(model=>model.register.Gender,new SelectList( new List<Object>{ 
-                       new { value = 0 , text = "Kadın"  },
-                       new { value = 1 , text = "Erkek" }
+                       new { value = 0 , text = "Famale"  },
+                       new { value = 1 , text = "Male" }
                       
                     },
                   "value",
@@ -76,7 +76,7 @@
                
                  
                 
-                <input class="buttom" name="submit" id="submit" tabindex="5" value="Kaydı Tamamla" type="submit"  > 	 
+                <input class="buttom" name="submit" id="submit" tabindex="5" value="Sign Up" type="submit"  > 	 
 
                 @if(TempData["true"]!=null) {
                     <script type="text/javascript">

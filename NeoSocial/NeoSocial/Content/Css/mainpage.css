@@ -48,8 +48,9 @@ header
 #content
 {
     float:right;
-    height:720px;
+    height:auto;
     width:75%;
+    background-color: rgba(255, 255, 255, 0.68);
     /*border: 5px solid rgba(0, 148, 255, 0.77);*/
     border-radius:20px 20px;
     margin-right:0px;    
