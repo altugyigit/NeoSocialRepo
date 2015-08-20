@@ -3,6 +3,7 @@
     background-image: url(/Content/Image/bckmain.jpg);
     background-size:cover;
     background-repeat:no-repeat;
+    background-attachment: fixed;
     background-position:center;
     text-align:left;
 }
