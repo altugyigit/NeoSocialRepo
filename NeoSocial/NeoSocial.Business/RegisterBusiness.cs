@@ -16,6 +16,7 @@ namespace NeoSocial.Business
         //List<UserRegister> getAllUsers();
         void addUser(UserRegister userRegister);
         bool checkUser(UserLogin userLogin);
+        List<UserRegister> findID(UserRegister userRegister);
     
     }
 
@@ -23,6 +24,7 @@ namespace NeoSocial.Business
   public  class RegisterBusiness : IRegisterBusiness
     {
       UserContext _userContext;
+      List<UserRegister> listUserRegister;
 
       public RegisterBusiness()
       {
@@ -56,6 +58,15 @@ namespace NeoSocial.Business
       
       }
 
+      public List<UserRegister> findID(UserRegister userRegister) {
+
+          string mail=userRegister.Email;
+
+        listUserRegister=  _userContext.UserRegisterRepository.Get().Where(x => x.Email == mail).ToList();
+
+        return listUserRegister;
+      
+      }
 
     }
 
