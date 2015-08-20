@@ -50,7 +50,7 @@
 
                    @Html.Label("Şifreyi tekrar girin")<br /><br />
 
-                 @Html.TextBox("repassword","repassword", new {@class="form-control",type="password" })<br />
+                 @Html.TextBox("repassword","", new {@class="form-control",type="password" })<br />
 
 
                  @Html.Label("Doğum Tarihi")<br /><br />
@@ -70,9 +70,9 @@
 
 
             
-            @*    @Html.LabelFor(model=>model.country.CountryName)<br /><br />
+               @Html.LabelFor(model=>model.country.CountryName)<br /><br />
                @Html.DropDownListFor(model=>model.register.CountryID,new SelectList((System.Collections.IEnumerable) ViewData["country"], "CountryID", "CountryName"),new { @class="form-control"})<br />
-               *@
+               
                
                  
                 
@@ -81,7 +81,9 @@
                 @if(TempData["true"]!=null) {
                     <script type="text/javascript">
                         alert("@TempData["true"]");
+
                       </script>
+                 
                 }
                 @if(TempData["false"]!=null) {
                 <script type="text/javascript">

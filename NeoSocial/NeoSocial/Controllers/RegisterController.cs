@@ -36,8 +36,10 @@ namespace NeoSocial.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Register(ViewModel model)
         {
+            _countryBusiness = new CountryBusiness();
             _registerBusiness = new RegisterBusiness();
             _loginBusiness = new LoginBusiness();
+            List<UserRegister> listUserRegister;
 
             DateTime dt = Convert.ToDateTime(model.register.BirthDate);
            
@@ -46,6 +48,11 @@ namespace NeoSocial.Controllers
             if (!_registerBusiness.checkUser(model.login))//Kullanıcı yoksa ekle.
             {
                 _registerBusiness.addUser(model.register);
+
+                listUserRegister = _registerBusiness.findID(model.register);
+                model.login.UserRegisterID = listUserRegister[0].UserRegisterID;
+
+
                 _loginBusiness.addUser(model.login);
                 TempData["true"] ="kaydınız alınmıştır'" ;
             }
@@ -55,7 +62,7 @@ namespace NeoSocial.Controllers
             
             }
 
-          
+            ViewData["country"] = _countryBusiness.getAllCountry();
             return View();
         }
        
