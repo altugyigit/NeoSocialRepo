@@ -112,7 +112,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MainController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
@@ -171,7 +170,6 @@
     <Content Include="Views\Admin.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\User\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>

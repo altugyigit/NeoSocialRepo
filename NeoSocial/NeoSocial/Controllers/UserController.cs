@@ -23,8 +23,8 @@ namespace NeoSocial.Controllers
                 FormsAuthentication.SignOut();
                 return View();
             }
-            
-            return Redirect("~/Home/Index");
+
+            return Redirect("~/Main/MainPage");
         }
 
         [AllowAnonymous]
@@ -42,7 +42,7 @@ namespace NeoSocial.Controllers
                 Session["UserName"] = _userName;
                 Session["Password"] = _userPassword;
 
-                return Redirect("~/Home/Index");
+                return Redirect("~/Main/MainPage");
             }
             else
             {

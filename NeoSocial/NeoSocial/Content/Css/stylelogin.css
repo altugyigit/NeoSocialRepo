@@ -9,6 +9,7 @@ body {
 background-image: url(/Content/Image/bck.jpg);
 background-size:cover;
 background-repeat:no-repeat;
+background-attachment: fixed;
 background-position:center;
 font-family: Arial;
 padding: 50px;
