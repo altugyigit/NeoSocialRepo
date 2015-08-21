@@ -11,7 +11,7 @@ namespace NeoSocial.Business
 {
     interface IProfileBusiness
     {
-        UserProfile getProfileInfo();
+        UserProfile getProfileInfo(int userId);
     }
     public class ProfileBusiness:IProfileBusiness
     {
