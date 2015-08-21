@@ -6,7 +6,6 @@ using System.Web.Mvc;
 using NeoSocial.Business;
 using System.IO;
 using System.Web.Security;
-
 namespace NeoSocial.Controllers
 {
     [Authorize]
@@ -24,13 +23,5 @@ namespace NeoSocial.Controllers
 
             return View();
         }
-
-        [Authorize]
-        public ActionResult LogOut()
-        {
-            FormsAuthentication.SignOut();
-            return RedirectToAction("Login", "User");
-        }
-
     }
 }
