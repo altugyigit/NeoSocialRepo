@@ -1,11 +1,9 @@
-﻿@model NeoSocial.ViewModels.Register
+﻿@model NeoSocial.ViewModels.ViewModel
 
 @{
     Layout = "~/Views/Shared/_LayoutRegister.cshtml";
     ViewBag.Title = "Register";
 }
-
-
 
 <!DOCTYPE html>
 <html>
@@ -21,56 +19,77 @@
      @using (Html.BeginForm("Register","Register",FormMethod.Post)){
          
          @Html.AntiForgeryToken();
-         
+          
           
 <div class="container">
 			<header>
-				<h1> Kayıt Ol</h1>
             </header>       
      
       <div  class="form">
     		<form id="contactform"> 
-    			 @Html.LabelFor(model=>model.register.Name)
-                 @Html.TextBoxFor(model=>model.register.Name, new {@class="form-control" } )
-    			
+    			 @Html.Label("Name")<br /><br />
 
-                @Html.LabelFor(model=>model.register.Surname)
-                 @Html.TextBoxFor(model=>model.register.Surname, new {@class="form-control" } )
+                 @Html.TextBoxFor(model=>model.register.Name, new {@class="form-control" } )<br />
+  
+                @Html.Label("Surname")<br /><br />
+
+                 @Html.TextBoxFor(model=>model.register.Surname, new {@class="form-control" } )<br />
     			
-    			@Html.LabelFor(model=>model.register.Email)
-                 @Html.TextBoxFor(model=>model.register.Email, new {@class="form-control", type = "email" })
+    			 @Html.Label("Email")<br /><br />
+
+                 @Html.TextBoxFor(model=>model.register.Email, new {@class="form-control", type = "email" })<br />
                  
-               @Html.LabelFor(model=>model.login.UserName)
-                 @Html.TextBoxFor(model=>model.login.UserName, new {@class="form-control" } )
+               @Html.Label("User Name")<br /><br />
+
+                 @Html.TextBoxFor(model=>model.login.UserName, new {@class="form-control" } )<br />
     			
-                @Html.LabelFor(model=>model.login.UserPassword)
-                 @Html.TextBoxFor(model=>model.login.UserPassword, new {@class="form-control",type="password" } )
+                @Html.Label("Password")<br /><br />
+
+                 @Html.TextBoxFor(model=>model.login.UserPassword, new {@class="form-control",type="password" } )<br />
 
 
-                   @Html.LabelFor(model=>model.login.UserPassword)
-                 @Html.TextBox("repassword","repassword", new {@class="form-control",type="password" })
+                   @Html.Label("Again Password")<br /><br />
+
+                 @Html.TextBox("repassword","", new {@class="form-control",type="password" })<br />
 
 
-                 @Html.LabelFor(model=>model.register.BirthDate)
-                 @Html.TextBoxFor(model=>model.register.BirthDate,"{0:d MMM yyyy}", new {@class="form-control",type="date" } )
+                 @Html.Label("Birth Date")<br /><br />
+
+                 @Html.TextBoxFor(model=>model.register.BirthDate, new { @class="form-control",type="date" })<br />
+                
+
+                 @Html.Label("Gender")<br /><br />
+             @Html.DropDownListFor(model=>model.register.Gender,new SelectList( new List<Object>{ 
+                       new { value = 0 , text = "Famale"  },
+                       new { value = 1 , text = "Male" }
+                      
+                    },
+                  "value",
+                  "text",
+                     2),new { @class="form-control"})<br /><br />
 
 
-                 @Html.LabelFor(model=>model.register.Gender)
-             @* @Html.DropDownListFor(tuple =>tuple.Item1.Gender
-
-
-            *@
-                @Html.LabelFor(model=>model.country.CountryName)
-                @*@Html.DropDownListFor(tuple=>tuple.Item3.CountryName
-                *@
+            
+               @Html.LabelFor(model=>model.country.CountryName)<br /><br />
+               @Html.DropDownListFor(model=>model.register.CountryID,new SelectList((System.Collections.IEnumerable) ViewData["country"], "CountryID", "CountryName"),new { @class="form-control"})<br />
                
-                 @Html.LabelFor(model=>model.city.CityName)
-                @*@Html.DropDownListFor(tuple=>tuple.Item4.CityName
+               
+                 
                 
-                *@
-                
-                
-                <input class="buttom" name="submit" id="submit" tabindex="5" value="Kaydı Tamamla" type="submit"  > 	 
+                <input class="buttom" name="submit" id="submit" tabindex="5" value="Sign Up" type="submit"  > 	 
+
+                @if(TempData["true"]!=null) {
+                    <script type="text/javascript">
+                        alert("@TempData["true"]");
+
+                      </script>
+                 
+                }
+                @if(TempData["false"]!=null) {
+                <script type="text/javascript">
+                    alert("@TempData["false"]");
+                      </script>
+                }
    </form> 
      
              

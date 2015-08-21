@@ -56,6 +56,7 @@ namespace NeoSocial.Controllers
 
                 _loginBusiness.addUser(model.login);
                 TempData["true"] ="kaydınız alınmıştır'" ;
+
                 return Redirect("~/Views/User/Login");
             }
 

@@ -14,6 +14,7 @@ namespace NeoSocial.Business
     interface IRegisterBusiness {
 
         //List<UserRegister> getAllUsers();
+        UserRegister findById(int registerId);
         void addUser(UserRegister userRegister);
         bool checkUser(UserLogin userLogin);
         List<UserRegister> findID(UserRegister userRegister);
@@ -25,6 +26,7 @@ namespace NeoSocial.Business
     {
       UserContext _userContext;
       List<UserRegister> listUserRegister;
+      UserRegister _userRegister;
 
       public RegisterBusiness()
       {
@@ -66,6 +68,15 @@ namespace NeoSocial.Business
 
         return listUserRegister;
       
+      }
+
+      public UserRegister findById(int registerId)
+      {
+          _userRegister = new UserRegister();
+
+          _userContext.UserRegisterRepository.Find(a => a.UserRegisterID == registerId);
+
+          return _userRegister;
       }
 
     }
