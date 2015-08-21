@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="CountryBusiness.cs" />
     <Compile Include="LoginBusiness.cs" />
+    <Compile Include="MailBusiness.cs" />
     <Compile Include="PostBusiness.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegisterBusiness.cs" />

@@ -6,6 +6,11 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
+using NeoSocial.Database.Models;
+using NeoSocial.Database.Repository;
+using NeoSocial.Database.IUnitOfWork;
+using NeoSocial.Business;
+using NeoSocial.ViewModels;
 
 namespace NeoSocial.Controllers
 {
@@ -13,6 +18,8 @@ namespace NeoSocial.Controllers
     public class UserController : Controller
     {
         LoginBusiness _loginBusiness;
+        RegisterBusiness _registerBusiness;
+        MailBusiness _mailBusiness;
 
         [AllowAnonymous]
         [HttpGet]
@@ -59,9 +66,36 @@ namespace NeoSocial.Controllers
             return RedirectToAction("Login", "User");
         }
 
-        [Authorize]
-        public ActionResult ForgotPassword()
+         [AllowAnonymous]
+        [HttpGet]
+        public ActionResult ForgotPassword() {
+        
+        return View();
+        
+        }
+
+        [AllowAnonymous]
+        [HttpPost]
+        public ActionResult ForgotPassword(Mail mail)
         {
+            _registerBusiness = new RegisterBusiness();
+            _mailBusiness = new MailBusiness();
+            List<UserRegister> list;
+            List<UserLogin> list2;
+
+            UserRegister r=new UserRegister();
+            r.Email=mail.ToEmail;
+
+          list=  _registerBusiness.findID(r);
+
+        list2= _mailBusiness.findPassword(list[0].UserRegisterID);
+
+        mail.FromEmail = "mertkozcan@outlook.com";
+        mail.Subject = "Şifre";
+        mail.Message = list2[0].UserPassword;
+
+        _mailBusiness.sendMail(mail);
+
             return View();
         }
 
