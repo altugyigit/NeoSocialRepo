@@ -16,6 +16,7 @@ namespace NeoSocial.ViewModels
         public UserLogin login { get; set; }
         public Country country { get; set; }
         public TurkeyCity city { get; set; }
+        public ArticlePost article { get; set; }
     }
     
 }

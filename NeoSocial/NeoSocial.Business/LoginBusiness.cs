@@ -13,8 +13,8 @@ namespace NeoSocial.Business
 {
     interface ILoginBusiness {
 
-        bool verifyUser(UserLogin _userLogin);
-        void addUser(UserLogin _userLogin);
+        int verifyUser(UserLogin userLogin);
+        void addUser(UserLogin userLogin);
     
     }
 
@@ -28,25 +28,27 @@ namespace NeoSocial.Business
             _userContext = new UserContext(new DbContextFactory());
         }
 
-        public   void addUser(UserLogin _userLogin)      
+        public   void addUser(UserLogin userLogin)      
         {
-            _userContext.UserLoginRepository.Create(_userLogin);
+            _userContext.UserLoginRepository.Create(userLogin);
             _userContext.Commit();
         }
 
-        public bool verifyUser(UserLogin _userLogin)
+        public int verifyUser(UserLogin userLogin)
         {
-            string _userNameText = _userLogin.UserName;
-            string _userPasswordText = _userLogin.UserPassword;
+            string _userNameText = userLogin.UserName;
+            string _userPasswordText = userLogin.UserPassword;
+
+            var resultVerify = _userContext.UserLoginRepository.Find(a => a.UserName == _userNameText && a.UserPassword == _userPasswordText);
 
             //Repository ile login bilgilerini kontrol et ve aynı zamanda şifre ve kullanıcı adının farklı olmasına dikkat et.
-            if(_userContext.UserLoginRepository.Find(a => a.UserName == _userNameText && a.UserPassword == _userPasswordText) != null && !_userNameText.Equals(_userPasswordText))
+            if( resultVerify != null && !_userNameText.Equals(_userPasswordText))
             {
-                return true;
+                return resultVerify.UserID;
             }
             else
             {
-                return false;
+                return -1;
             }
         }
     }

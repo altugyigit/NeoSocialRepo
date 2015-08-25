@@ -1,0 +1,35 @@
+﻿@model NeoSocial.ViewModels.ViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>PartialShareArticle</title>
+</head>
+<body>
+    <div>
+        @Html.BeginForm("PartialShareArticle", "Profile", FormMethod.Post)
+        {
+        <section id="header">
+            @Html.TextBoxFor(a => a.article.PostHeader);
+        </section>
+        <section id="content">
+            @Html.TextAreaFor(a => a.article.PostContent);
+        </section>
+        @{
+                var currentDate = DateTime.Today.ToShortDateString();
+                
+                
+        }
+            
+        <section id="share">
+            <input type="submit" class="btn" value="Share"/>
+        </section>
+        }
+    </div>
+</body>
+</html>
