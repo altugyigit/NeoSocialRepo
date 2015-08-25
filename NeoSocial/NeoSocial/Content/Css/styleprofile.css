@@ -138,7 +138,8 @@ html[xmlns] .clearfix { display: block; }
 
 #partial 
 {
-    width:100%;
+    width:560px;
     border:2px solid red;
     margin-bottom:0;
+    float:left;
 }
