@@ -15,10 +15,11 @@
 <body>	
     <div id="profileMain">
 	<header>
-		<div class="wrapper">
-
-			<span id="usernav"><a href="#">Çıkış</a> - <a href="#">Ayarlar</a> - <a href="#">Profilim</a></span>
-		</div>
+		<div id="menu">
+            @Html.ActionLink("Profile", "Profile", "Profile",null, new { @class="btn" })
+            @Html.ActionLink("Share Article","Profile", "Profile",null, new { @class="btn" })     
+            @Html.ActionLink("Log Out", "LogOut", "User", null, new { @class="btn" })        
+        </div>
 	</header>
 
 	<div id="content" class="clearfix">
@@ -98,6 +99,12 @@
 				</div>
 			</div>
 		</section>
+
+        <section id="partial">
+            @Html.Partial("PartialProfile");
+        </section>
+        
+
 	</div>
     </div>
 </body>
