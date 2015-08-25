@@ -43,12 +43,10 @@
 					</ul>
 				</div>
 			</div>
-			
-			<h1>Duvar</h1>
-			<p>Deneme</p>
 		</section>
 		
 		<section id="right">
+            <div id="fixedright">
 			<div class="gcontent">
 				<div class="head"><h1>Rozetler(0)</h1></div>
 				<div class="boxy">
@@ -98,9 +96,13 @@
 					<span><a href="#">Tümünü gör</a></span>
 				</div>
 			</div>
+                </div>
 		</section>
-        <section id="partial">
-            @Html.Partial("PartialProfile");
+        <section id="partialarticle">
+            @Html.Partial("PartialShareArticle")
+        </section>
+        <section id="partialprofile">
+            @Html.Partial("PartialProfile")
         </section>
 	</div>
     

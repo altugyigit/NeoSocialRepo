@@ -11,24 +11,19 @@
     <title>PartialShareArticle</title>
 </head>
 <body>
-    <div>
-        @Html.BeginForm("PartialShareArticle", "Profile", FormMethod.Post)
+    
+    <div id="shareform">
+        @using(Html.BeginForm("PartialShareArticle", "Profile", FormMethod.Post))
         {
-        <section id="header">
-            @Html.TextBoxFor(a => a.article.PostHeader);
-        </section>
-        <section id="content">
-            @Html.TextAreaFor(a => a.article.PostContent);
-        </section>
-        @{
-                var currentDate = DateTime.Today.ToShortDateString();
-                
-                
-        }
-            
-        <section id="share">
-            <input type="submit" class="btn" value="Share"/>
-        </section>
+        
+            @Html.TextBoxFor(a => a.article.PostHeader, new { @class="txt",  @required = "required", placeholder="Header"})
+            <br />
+            @Html.TextAreaFor(a => a.article.PostContent, new { @class="txt",  @required = "required", placeholder="Type ..." })
+            <br />
+            var currentDate = DateTime.Today.ToShortDateString();
+        
+                <input type="submit" class="btnShare" value="Share"/>
+        
         }
     </div>
 </body>
