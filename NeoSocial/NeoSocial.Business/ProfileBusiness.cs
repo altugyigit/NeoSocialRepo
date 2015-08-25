@@ -12,6 +12,7 @@ namespace NeoSocial.Business
     interface IProfileBusiness
     {
         UserProfile getProfileInfo(int userId);
+        void addProfile(UserProfile userProfile);
     }
     public class ProfileBusiness:IProfileBusiness
     {
@@ -30,6 +31,13 @@ namespace NeoSocial.Business
             _userContext.UserProfileRepository.Find(a => a.UserID == userId);
 
             return _userProfile; 
+        }
+
+     public   void addProfile(UserProfile userProfile) {
+
+         _userContext.UserProfileRepository.Create(userProfile);
+         _userContext.Commit();
+        
         }
     }
 }

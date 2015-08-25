@@ -20,6 +20,7 @@ namespace NeoSocial.Controllers
         CountryBusiness _countryBusiness;
         RegisterBusiness _registerBusiness;
         LoginBusiness _loginBusiness;
+        ProfileBusiness _profileBusiness;
 
 
         [AllowAnonymous]
@@ -55,6 +56,9 @@ namespace NeoSocial.Controllers
 
 
                 _loginBusiness.addUser(model.login);
+
+
+
                 TempData["true"] ="kaydınız alınmıştır'" ;
 
                 return Redirect("~/User/Login");
