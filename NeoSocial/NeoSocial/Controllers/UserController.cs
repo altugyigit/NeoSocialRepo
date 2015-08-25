@@ -42,12 +42,14 @@ namespace NeoSocial.Controllers
 
             string _userName = viewModel.login.UserName.ToString();
             string _userPassword = viewModel.login.UserPassword.ToString();
+            int _userId = _loginBusiness.verifyUser(viewModel.login);
 
-            if (ModelState.IsValid && _loginBusiness.verifyUser(viewModel.login))
+            if (ModelState.IsValid && _userId != -1)
             {
                 FormsAuthentication.SetAuthCookie(_userName, true);
                 Session["UserName"] = _userName;
                 Session["Password"] = _userPassword;
+                Session["UserId"] = _userId;
 
                 return Redirect("~/Main/MainPage");
             }
