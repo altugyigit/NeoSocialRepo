@@ -9,5 +9,8 @@ namespace NeoSocial.Database.Models
         public Nullable<int> UserRegisterID { get; set; }
         public Nullable<int> UserID { get; set; }
         public Nullable<int> IconID { get; set; }
+
+     
     }
+
 }

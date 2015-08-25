@@ -41,7 +41,10 @@ namespace NeoSocial.Controllers
             _countryBusiness = new CountryBusiness();
             _registerBusiness = new RegisterBusiness();
             _loginBusiness = new LoginBusiness();
+            _profileBusiness = new ProfileBusiness();
             List<UserRegister> listUserRegister;
+            List<UserLogin> listUserLogin;
+            
 
             DateTime dt = Convert.ToDateTime(model.register.BirthDate);
            
@@ -57,6 +60,11 @@ namespace NeoSocial.Controllers
 
                 _loginBusiness.addUser(model.login);
 
+                listUserLogin = _loginBusiness.findUser(model.login);
+            //    model.profile.UserID = listUserLogin[0].UserID;
+           
+            //model.profile.UserRegisterID = model.login.UserRegisterID;
+            _profileBusiness.addProfile(model.profile);
 
 
                 TempData["true"] ="kaydınız alınmıştır'" ;
