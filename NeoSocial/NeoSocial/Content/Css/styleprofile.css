@@ -2,11 +2,21 @@
 /* global.css styles */
 
 /* @group resets and elements */
-* { margin: 0; padding: 0; }
 
-html { height: 101%; font-family: “Helvetica Neue”, Arial, Helvetica, sans-serif; background: #fff; }
-body { font-size: 62.5%; font-family: Helvetica, Arial, sans-serif; line-height: 10%; }
-
+html { 
+        background-position:center; height: 101%; font-family: “Helvetica Neue”, Arial, Helvetica, sans-serif; text-align:center;}
+body { 
+       
+       font-size: 62.5%; 
+       font-family: Helvetica, Arial, sans-serif; line-height: 10%; }
+#profileMain 
+{
+       background-color:rgba(255, 255, 255, 0.50);
+       width:90%;
+       border-radius:20px 20px;
+       margin-left:auto;
+       margin-right:auto;
+}
 img { border: 0;}
 
 a { color: #3c86b7; text-decoration: none; }
@@ -23,14 +33,14 @@ h4 { color: #232323; font-family: Arial, Tahoma, sans-serif; font-size: 1.1em; l
 /* @group core */
 .wrapper { width: 850px; overflow: hidden; margin: 0 auto; background: none; }
 
-header { height: 100px; background-color: #afafaf; }
+header { height: 100px; background-color: #3498DB; border-radius:20px 20px; }
 
 header #usernav { float: right; line-height: 100px; font-size: 14px; font-weight: bold; color: #555; }
 header #usernav a { color: #444; text-shadow: 0px 1px 1px #ddd; }
 
 header #usernav a span img { position: relative; top: 8px; background: #cecece; margin-left: 5px; padding: 3px; border: 1px solid #969696; }
 
-#content { display: block; width: 820px; margin: 0 auto;  }
+#content { display: block; width: 820px; margin: 0 auto; padding-top:50px;  }
 
 #left { display: block; width: 560px; float: left; overflow: hidden; margin-right: 20px; }
 #right { display: block; width: 240px; float: left; overflow: hidden; }
@@ -51,7 +61,7 @@ ul#n li.sel a { color: #fff; text-shadow: 0px 1px 2px #88b618; }
 #userStats .pic { float: left; display: block; margin-right: 10px; }
 #userStats .pic a img { padding: 7px; background: #fff; border: 1px solid #ccc; }
 
-#userStats .data { float: left; display: block; position:  relative; width: 350px; height: 166px; padding: 4px; padding-left: 15px; background: #e6e6e6; overflow:  hidden; box-sizing: border-box; -moz-box-sizing: border-box; }
+#userStats .data { display: block; position:  relative; width: 350px; margin-right:auto;margin-left:auto; height: 166px; padding: 4px; padding-left: 15px; border-radius:20px 20px; overflow:  hidden; box-sizing: border-box; -moz-box-sizing: border-box; }
 #userStats .data h1 { color: #474747; line-height: 1.6em; text-shadow: 0px 1px 1px #fff; }
 #userStats .data h3 { color: #666; line-height: 0.9em; margin-bottom: 5px; }
 #userStats .data h4 { font-size: 1.2em; line-height: 1.3em; }
@@ -59,14 +69,17 @@ ul#n li.sel a { color: #fff; text-shadow: 0px 1px 2px #88b618; }
 #userStats .data .socialMediaLinks { position: absolute; right: 6px; top: 8px; }
 #userStats .data .socialMediaLinks a img { margin-right: 5px; }
 
-#userStats .data .sep { clear: both; margin-top: 40px; width: 320px; height: 1px; border-bottom: 1px solid #ccc; margin-bottom: 0; }
-#userStats .data ul.numbers { list-style: none; width: 320px; padding-top: 7px; margin-top: 0; border-top: 1px solid #fff; color: #676767; }
-#userStats .data ul.numbers li { width: 95px; float: left; display: block; padding-left: 8px; height: 50px; border-right: 1px dotted #bbb; text-transform: uppercase; }
+#userStats .data .sep { clear: both; margin-top: 40px; width: 100%; height: 1px; border-bottom: 1px solid #ccc; }
+#userStats .data ul.numbers { list-style: none;
+   margin-left: 0;
+   padding-left: 1em;
+   text-indent: -1em; width: 100%; padding-top: 7px; margin-top: 0; border-top: 1px solid #fff; color: #676767; }
+#userStats .data ul.numbers li { width: 30%; float: left; display: block; height: 50px; border-right: 1px dotted #bbb;border-left: 1px dotted #bbb; text-transform: uppercase; }
 #userStats .data ul.numbers li strong { color: #434343; display: block; font-size: 3.4em; line-height: 1.1em; font-weight: bold; }
 
 /* @group right */
 #right .gcontent { display: block; margin-bottom: 20px; }
-#right .gcontent .head { background: #589fc6; border: 1px solid #3e82a7; padding-left: 8px; }
+#right .gcontent .head { background: #3498DB; border: 1px solid #3e82a7; padding-left: 8px; }
 #right .gcontent .head h1 { color: #fafcfd; font-weight: bold; font-size: 1.4em; }
 
 #right .gcontent .boxy { border-radius: 0px 0px 5px 5px; border: 1px solid #ccc; border-top: 0px; padding: 10px 8px; background: #f9f9f9; }
