@@ -11,13 +11,23 @@ namespace NeoSocial.Controllers
     [Authorize]
     public class MainController : Controller
     {
+        PostBusiness _postBusiness;
+        int _userId;
         //
         // GET: /Main/
         [Authorize]
         public ActionResult MainPage()
         {            
-            PostBusiness _postBusiness = new PostBusiness();
-            ViewData["postDatabase"] = _postBusiness.getAllArticlePost();
+            _postBusiness = new PostBusiness();
+
+            try
+            {
+               _userId = (int)Session["UserId"];
+            }
+            catch(Exception ex)
+            {
+            }
+            ViewData["postDatabase"] = _postBusiness.getUserArticlePost(_userId);
 
             ViewData["pathImage"] = "/Content/Image/Icons/iconFamale3.jpg";
 
