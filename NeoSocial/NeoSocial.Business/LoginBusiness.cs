@@ -15,7 +15,8 @@ namespace NeoSocial.Business
 
         int verifyUser(UserLogin userLogin);
         void addUser(UserLogin userLogin);
-       List<UserLogin> findUser(UserLogin userLogin);
+        List<UserLogin> findUser(UserLogin userLogin);
+        int findUserIdByName(string userName);
     
     }
 
@@ -23,6 +24,7 @@ namespace NeoSocial.Business
 {
 
         UserContext _userContext;
+        UserLogin _userLogin;
 
         public LoginBusiness() 
         {
@@ -56,13 +58,21 @@ namespace NeoSocial.Business
      public   List<UserLogin> findUser(UserLogin userLogin) {
 
             List<UserLogin> login = new List<UserLogin>();
-            string username = userLogin.UserName;
+            string _username = userLogin.UserName;
 
-        login=    _userContext.UserLoginRepository.Get().Where(x => x.UserName == username).ToList();
+        login=    _userContext.UserLoginRepository.Get().Where(x => x.UserName == _username).ToList();
 
         return login;
         
         }
 
+     public int findUserIdByName(string userName)
+     {
+         _userLogin = new UserLogin();
+
+         _userLogin = _userContext.UserLoginRepository.Get().Where(x => x.UserName == userName).ToList().First();
+
+         return _userLogin.UserID;
+     }
     }
 }

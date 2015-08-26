@@ -14,23 +14,15 @@
 <body>
     
     <div id="shareform">
+        <h1>@Session["UserId"]</h1>
         @using(Html.BeginForm("PartialShareArticle", "Profile", FormMethod.Post))
         {
-            
         
             @Html.TextBoxFor(a => a.article.PostHeader, new { @class="txt",  @required = "required", placeholder="Header"})
             <br />
             @Html.TextAreaFor(a => a.article.PostContent, new { @class="txt",  @required = "required", placeholder="Type ..." })
             <br />
             
-            var currentDate = DateTime.Today.ToShortDateString();
-            Model.article.PostDate = currentDate;
-            
-            Model.article.PostOwnerID = (int)Session["UserId"];
-            
-            Model.article.PostLikeCount = -1;
-            Model.article.PostCommentID = -1;
-                
             <input type="submit" class="btnShare" value="Share"/>
         
         }

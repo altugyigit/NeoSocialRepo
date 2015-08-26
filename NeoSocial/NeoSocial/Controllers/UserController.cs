@@ -31,6 +31,10 @@ namespace NeoSocial.Controllers
                 return View();
             }
 
+            _loginBusiness = new  LoginBusiness();
+
+            Session["UserId"] = _loginBusiness.findUserIdByName(HttpContext.User.Identity.Name.ToString());
+
             return Redirect("~/Main/MainPage");
         }
 

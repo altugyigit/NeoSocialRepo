@@ -38,6 +38,7 @@ namespace NeoSocial.Business
             }
             catch (Exception ex)
             {
+                
                 return false;
             }
 

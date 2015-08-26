@@ -20,13 +20,35 @@ namespace NeoSocial.Controllers
             return View();
         }
         [Authorize]
+        [HttpGet]
+        public ActionResult PartialShareArticle()
+        {
+            return View();
+        }
+        [Authorize]
         [HttpPost]
         public ActionResult PartialShareArticle(ViewModel model)
         {
             _postBusiness = new PostBusiness();
-            _postBusiness.insertArticlePost(model.article);
 
-            return Redirect("~/Profile/Profile");
+            string currentDate = DateTime.Today.ToShortDateString();
+            model.article.PostDate = currentDate;
+
+            model.article.PostOwnerID = (int)Session["UserId"];
+
+            model.article.PostLikeCount = -1;
+            model.article.PostCommentID = -1;
+
+            if (_postBusiness.insertArticlePost(model.article))
+            {
+                return Redirect("~/Profile/Profile");
+            }
+            else
+            {
+                Response.Write("HATA !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+                return Redirect("~/Profile/Profile");
+            }
+            
         }
     }
 }
