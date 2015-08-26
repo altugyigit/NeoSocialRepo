@@ -2,6 +2,9 @@
     Layout = null;
 }
 
+@using NeoSocial.Database.Models;
+@using NeoSocial.Business;
+
 <!DOCTYPE html>
 
 <html>
@@ -11,7 +14,54 @@
 </head>
 <body>
     <div>
-        <h1>DENEME PARTIAL</h1>
+        @{ 
+            
+            int _userId = -1;
+            
+            PostBusiness _postBusiness = new PostBusiness();
+
+            try
+            {
+                _userId = (int)Session["UserId"];
+                
+                ViewData["pathImage"] = "/Content/Image/Icons/iconFamale3.jpg";
+
+                    var postDatabaseList = (List<ArticlePost>)_postBusiness.getUserArticlePost(_userId);
+
+                    int countList = postDatabaseList.Count();
+    
+                    if(countList == 0)
+                    {
+                        // http://www.icons-land.com
+                        <img alt="Unfortunatly" src="~/Content/Image/sad.png" style="float:left; padding-right:8px;" /> 
+                         <h3>Unfortunatially, there is nothing to show. @Session["UserId"]</h3>
+                    }
+                    else
+                    {
+     
+                            foreach(var post in postDatabaseList)
+                        {
+                            <div class="postTemplate">
+                                <img id="avatarImg" src=@ViewData["pathImage"] />
+                                <div class="postContent">
+                                    <h2>@post.PostHeader - @post.PostDate</h2>
+                                    <h2>@post.PostContent</h2>        
+                                    <h4>Like : @post.PostLikeCount Comment : @post.PostCommentID</h4>      
+                                </div>  
+                            </div>
+                            <br />
+                        } 
+           
+            }
+            }
+            catch (Exception ex)
+            {
+
+            }
+
+            
+                     
+        }
     </div>
 </body>
 </html>

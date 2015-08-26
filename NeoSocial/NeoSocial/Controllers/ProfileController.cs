@@ -12,6 +12,8 @@ namespace NeoSocial.Controllers
     public class ProfileController : Controller
     {
         PostBusiness _postBusiness;
+        int _userId;
+
         //
         // GET: /Profile/
         [Authorize]
@@ -36,19 +38,14 @@ namespace NeoSocial.Controllers
 
             model.article.PostOwnerID = (int)Session["UserId"];
 
-            model.article.PostLikeCount = -1;
-            model.article.PostCommentID = -1;
+            model.article.PostLikeCount = 0;
+            model.article.PostCommentID = 0;
 
-            if (_postBusiness.insertArticlePost(model.article))
-            {
-                return Redirect("~/Profile/Profile");
-            }
-            else
-            {
-                Response.Write("HATA !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-                return Redirect("~/Profile/Profile");
-            }
+            _postBusiness.insertArticlePost(model.article);
+
+            return Redirect("~/Profile/Profile");
             
         }
+
     }
 }
