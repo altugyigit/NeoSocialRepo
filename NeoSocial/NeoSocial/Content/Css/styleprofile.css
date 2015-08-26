@@ -77,10 +77,10 @@ header #usernav a { color: #444; text-shadow: 0px 1px 1px #ddd; }
 
 header #usernav a span img { position: relative; top: 8px; background: #cecece; margin-left: 5px; padding: 3px; border: 1px solid #969696; }
 
-#content { display: block; width: 72%; margin: 0 auto; padding-top:50px; float: right; overflow:hidden; }
+#content { display: block; width: 72%; margin-right:auto; margin-left:auto; padding-top:50px; float: right; overflow:hidden; border:2px solid red; }
 
-#left {display: block; width: 560px; float: left; overflow: hidden; margin-right: 20px; }
-#right { display: block; width: 240px; float: right; overflow: hidden; padding-right:50px;}
+#left {display: block; width:60% /*560px*/; float: left; overflow: hidden; margin-right: 20px; }
+#right { display: block; width: 30%; float: right; overflow: hidden; padding-right:50px;}
 
 /* @group navigation */
 nav { width: auto; background: #eee; height: 45px; border-bottom: 1px solid #dadada; margin-bottom: 30px; }
@@ -143,19 +143,22 @@ html[xmlns] .clearfix { display: block; }
 
 #partialarticle 
 {
+    position:static;
     padding-top:20px;
     display:block;
-    width:560px;
+    width:60%;
     float:left;
+    border:2px solid red;
 }
 
 #partialprofile 
 {
     padding-top:20px;
     display:block;
-    width:560px;
+    width:60%;
     margin-bottom:0;
     float:left;
+    border:2px solid red;
 }
 
 /*Sag tarafı sabitle*/
