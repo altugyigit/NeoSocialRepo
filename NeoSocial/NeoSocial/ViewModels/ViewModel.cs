@@ -18,6 +18,15 @@ namespace NeoSocial.ViewModels
         public TurkeyCity city { get; set; }
         public ArticlePost article { get; set; }
         public UserProfile profile { get; set; }
+
+        public ViewModel() {
+            profile = new UserProfile();
+
+            profile.UserID = 0;
+            profile.UserRegisterID = 0;
+            
+        
+        }
     }
     
 }
