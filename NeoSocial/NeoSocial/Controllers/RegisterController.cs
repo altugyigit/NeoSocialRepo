@@ -61,9 +61,9 @@ namespace NeoSocial.Controllers
                 _loginBusiness.addUser(model.login);
 
                 listUserLogin = _loginBusiness.findUser(model.login);
-            //    model.profile.UserID = listUserLogin[0].UserID;
+                model.profile.UserID = listUserLogin[0].UserID;
            
-            //model.profile.UserRegisterID = model.login.UserRegisterID;
+            model.profile.UserRegisterID = model.login.UserRegisterID;
             _profileBusiness.addProfile(model.profile);
 
 
