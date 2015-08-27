@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CountryBusiness.cs" />
+    <Compile Include="IconBusiness.cs" />
     <Compile Include="LoginBusiness.cs" />
     <Compile Include="MailBusiness.cs" />
     <Compile Include="PostBusiness.cs" />

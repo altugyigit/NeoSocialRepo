@@ -14,6 +14,7 @@ namespace NeoSocial.Database.IUnitOfWork
     {
         ArticlePostRepository ArticlePostRepository { get; }
         CommentRepository CommentRepository { get; }
+        IconRepository IconRepository { get; }
 
     }
     public class PostContext : IPostContext
@@ -23,6 +24,7 @@ namespace NeoSocial.Database.IUnitOfWork
 
         private ArticlePostRepository _articlePostRepository;
         private CommentRepository _commentRepository;
+        private IconRepository _iconRepository;
 
         #region Constructur
         public PostContext(IDbContextFactory dbContextFactory)
@@ -69,11 +71,23 @@ namespace NeoSocial.Database.IUnitOfWork
         {
             get
             {
-                if (_articlePostRepository == null)
+                if (_commentRepository == null)
                 {
                     _commentRepository = new CommentRepository(_dbContext);
                 }
                 return _commentRepository;
+            }
+        }
+
+        public IconRepository IconRepository
+        {
+            get
+            {
+                if (_articlePostRepository == null)
+                {
+                    _iconRepository = new IconRepository(_dbContext);
+                }
+                return _iconRepository;
             }
         }
 

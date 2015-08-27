@@ -19,6 +19,20 @@ namespace NeoSocial.Controllers
         [Authorize]
         public ActionResult Profile()
         {
+            int _userId = -1;
+            
+            PostBusiness _postBusiness = new PostBusiness();
+
+            try
+            {
+                _userId = (int)Session["UserId"];
+
+                ViewData["pathImage"] = "/Content/Image/Icons/iconFamale3.gif";
+                ViewData["postDatabase"] = _postBusiness.getUserArticlePost(_userId);
+            }
+            catch(Exception ex)
+            {
+            }
             return View();
         }
         [Authorize]
