@@ -12,7 +12,10 @@ namespace NeoSocial.Controllers
     public class ProfileController : Controller
     {
         PostBusiness _postBusiness;
+        IconBusiness _iconBusiness;
+        ProfileBusiness _profileBusiness;
         int _userId;
+        int _iconId;
 
         //
         // GET: /Profile/
@@ -21,13 +24,16 @@ namespace NeoSocial.Controllers
         {
             int _userId = -1;
             
-            PostBusiness _postBusiness = new PostBusiness();
+            _postBusiness = new PostBusiness();
+            _iconBusiness = new IconBusiness();
+            _profileBusiness = new ProfileBusiness();
 
             try
             {
                 _userId = (int)Session["UserId"];
+                _iconId = (int)_profileBusiness.getProfileInfo(_userId).IconID;
 
-                ViewData["pathImage"] = "/Content/Image/Icons/iconFamale3.gif";
+                ViewData["pathImage"] = _iconBusiness.getIconUrl(_iconId);
                 ViewData["postDatabase"] = _postBusiness.getUserArticlePost(_userId);
             }
             catch(Exception ex)
