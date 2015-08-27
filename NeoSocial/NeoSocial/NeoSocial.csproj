@@ -213,6 +213,7 @@
     <None Include="Properties\PublishProfiles\neosocial.pubxml" />
     <Content Include="Views\Profile\PartialProfile.cshtml" />
     <Content Include="Views\Profile\PartialShareArticle.cshtml" />
+    <Content Include="Views\Profile\Icon.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
