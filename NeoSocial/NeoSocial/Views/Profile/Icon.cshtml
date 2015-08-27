@@ -9,15 +9,15 @@
 <head>
 	<meta charset="utf-8" />
 	<title>Icon</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/Css/styleicon.css"
 	
 </head>
 
 <body>	
 
-    @Html.BeginForm("Icon","Profile",FormMethod.Post)
+   
 
-
-    @Html.RadioButtonFor(model=>model.profile.IconID,1)  <img src= "@Url.Content("~/Content/Image/Icons/iconFamale.jpg")" alt="Image" />
+  <img src= "@Url.Content("~/Content/Image/Icons/iconFamale.gif")" alt="Image" />  @Html.RadioButtonFor(model => model.profile.IconID, 1, new { @id="icon1" }) 
 
 
     </body>

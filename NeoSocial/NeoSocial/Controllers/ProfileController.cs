@@ -61,5 +61,11 @@ namespace NeoSocial.Controllers
             
         }
 
+        public ActionResult Icon() {
+
+
+            return View();
+        }
+
     }
 }

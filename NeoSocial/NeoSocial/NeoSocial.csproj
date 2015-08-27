@@ -129,6 +129,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="Content\Css\mainpage.css" />
     <Content Include="Content\Css\sharearticle.css" />
+    <Content Include="Content\Css\styleicon.css" />
     <Content Include="Content\Css\stylelogin.css" />
     <Content Include="Content\Css\styleprofile.css" />
     <Content Include="Content\Css\styleregister.css" />
