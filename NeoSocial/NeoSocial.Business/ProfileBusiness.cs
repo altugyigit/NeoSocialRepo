@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using NeoSocial.Database.Models;
 using NeoSocial.Database.IUnitOfWork;
 using NeoSocial.Database.Repository;
-using System.Data.Entity;
 
 namespace NeoSocial.Business
 {
