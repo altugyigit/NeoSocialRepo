@@ -4,11 +4,16 @@
 /* @group resets and elements */
 
 html { 
-        background-position:center; height: 101%; font-family: “Helvetica Neue”, Arial, Helvetica, sans-serif; text-align:center;}
+    font-family:Tahoma;    
+    background-image: url(/Content/Image/bckmain.jpg);
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    background-position:center; height: 101%;text-align:center;}
 body { 
        
        font-size: 62.5%; 
-       font-family: Helvetica, Arial, sans-serif; line-height: 10%; }
+       line-height: 10%; }
 #profileMain 
 {
        background-color:rgba(255, 255, 255, 0.50);
@@ -19,24 +24,13 @@ body {
 }
 img { border: 0;}
 
-a { color: #3c86b7; text-decoration: none; }
-a:hover { text-decoration: underline; }
-
-ul { line-height: 120%; }
-
-p { font-size: 1.2em; line-height: 1.4em; font-family: Arial, sans-serif; color: #333; margin-bottom: 15px; }
-h1 { font-family: Helvetica, Arial, Verdana, sans-serif; color: #444; font-weight: bold; font-size: 1.7em; line-height: 2.0em; }
-h2 { font-family: Georgia, Tahoma, sans-serif; font-style: italic; font-size: 1.4em; letter-spacing: -0.04em; line-height: 1.8em; }
-h3 { color: #698216; font-weight: normal; font-size: 1.3em; line-height: 1.6em;  }
-h4 { color: #232323; font-family: Arial, Tahoma, sans-serif; font-size: 1.1em; line-height: 1.3em; margin-bottom: 10px; }
-
 /* @group core */
 .wrapper { width: 850px; overflow: hidden; margin: 0 auto; background: none; }
 
 header 
 {
     padding-top:50px;
-    background-color:rgba(255, 255, 255, 0.50);
+    /*background-color:rgba(255, 255, 255, 0.50);*/
     position:fixed;
     float:left;
     height:640px;
@@ -236,6 +230,23 @@ html[xmlns] .clearfix { display: block; }
     margin-left:2%;
     width:auto;
 }
+#postOwnerText 
+{
+    font-size:large;
+}
+#postHeaderText 
+{
+    font-size:medium;
+}
+#postContentTextArea 
+{
+    background:rgba(255, 255, 255, 0.00);
+    width:60%;
+    height:100px;
+    font-size:medium;
+    font-style:normal;
+    font-weight:normal;
+}
 #avatarImg 
 {
     margin-bottom:1%;
@@ -244,5 +255,31 @@ html[xmlns] .clearfix { display: block; }
     margin-left:1%;
     float:left;
     width:10%;
+}
+#likeIcon 
+{
+   width:32px;
+   height:32px;
+}
+
+#commentIcon
+{
+   width:32px;
+   height:32px;
+}
+
+#likeIcon:hover 
+{
+    background: url(/Content/Image/likeblue.png) no-repeat;
+}
+
+#commentIcon:hover 
+{
+    background: url(/Content/Image/commentblue.png) no-repeat;
+}
+
+.likecomclass 
+{
+    font-family:'Lucida Handwriting';
 }
 /*POST CSS*/

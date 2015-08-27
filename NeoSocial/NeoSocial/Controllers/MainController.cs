@@ -22,7 +22,7 @@ namespace NeoSocial.Controllers
           
             ViewData["postDatabase"] = _postBusiness.getAllArticlePost();
 
-            ViewData["pathImage"] = "/Content/Image/Icons/iconFamale3.jpg";
+            ViewData["pathImage"] = "/Content/Image/Icons/iconFamale3.gif";
 
             return View();
         }
