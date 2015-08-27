@@ -5,7 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using NeoSocial.Business;
-
+using NeoSocial.Database.Models;
 namespace NeoSocial.Controllers
 {
     [Authorize]
@@ -14,6 +14,7 @@ namespace NeoSocial.Controllers
         PostBusiness _postBusiness;
         IconBusiness _iconBusiness;
         ProfileBusiness _profileBusiness;
+        LoginBusiness _loginBusiness;
         int _userId;
         int _iconId;
 
@@ -22,7 +23,7 @@ namespace NeoSocial.Controllers
         [Authorize]
         public ActionResult Profile()
         {
-            int _userId = -1;
+             _userId = -1;
             
             _postBusiness = new PostBusiness();
             _iconBusiness = new IconBusiness();
@@ -67,11 +68,30 @@ namespace NeoSocial.Controllers
             
         }
 
+        [HttpGet]
         public ActionResult Icon() {
 
-
             return View();
+        
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Icon(ViewModel model)
+        {
+              int userId = (int)Session["UserId"];
+            _profileBusiness = new ProfileBusiness();
+            UserProfile profile = new UserProfile();
+            _loginBusiness = new LoginBusiness();
+            
+            profile = _profileBusiness.getProfileInfo(userId);
+
+            profile.IconID = model.profile.IconID;
+            
+
+            _profileBusiness.updateIcon(profile);
+           
+            return View();
+        }
     }
 }

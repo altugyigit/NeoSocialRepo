@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using NeoSocial.Database.Models;
 using NeoSocial.Database.IUnitOfWork;
 using NeoSocial.Database.Repository;
+using System.Data.Entity;
 
 namespace NeoSocial.Business
 {
@@ -14,6 +15,8 @@ namespace NeoSocial.Business
         int getProfileId(int userId);
         UserProfile getProfileInfo(int userId);
         void addProfile(UserProfile userProfile);
+        void updateIcon(UserProfile userProfile);
+    
     }
     public class ProfileBusiness:IProfileBusiness
     {
@@ -27,7 +30,7 @@ namespace NeoSocial.Business
 
         public UserProfile getProfileInfo(int userId)
         {
-            _userProfile = _userContext.UserProfileRepository.Find(a => a.UserID == userId);
+            _userProfile = _userContext.UserProfileRepository.Get().Where(a => a.UserID == userId).ToList().First();
 
             return _userProfile; 
         }
@@ -47,5 +50,18 @@ namespace NeoSocial.Business
          _userContext.Commit();
         
         }
+
+     public void updateIcon(UserProfile userProfile)
+     {
+        
+
+         _userContext.UserProfileRepository.Update(userProfile);
+         _userContext.Commit();
+
+     }
+
+    
+
+
     }
 }
