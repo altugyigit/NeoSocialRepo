@@ -27,9 +27,7 @@ namespace NeoSocial.Business
 
         public UserProfile getProfileInfo(int userId)
         {
-            _userProfile = new UserProfile();
-
-            _userContext.UserProfileRepository.Find(a => a.UserID == userId);
+            _userProfile = _userContext.UserProfileRepository.Find(a => a.UserID == userId);
 
             return _userProfile; 
         }
