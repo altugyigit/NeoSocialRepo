@@ -1,13 +1,3 @@
-C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial.Database\obj\Debug\NeoSocial.Database.csprojResolveAssemblyReference.cache
-C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial.Database\bin\Debug\NeoSocial.Database.dll.config
-C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial.Database\bin\Debug\NeoSocial.Database.dll
-C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial.Database\bin\Debug\NeoSocial.Database.pdb
-C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial.Database\bin\Debug\EntityFramework.dll
-C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial.Database\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial.Database\bin\Debug\EntityFramework.xml
-C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial.Database\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial.Database\obj\Debug\NeoSocial.Database.dll
-C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial.Database\obj\Debug\NeoSocial.Database.pdb
 C:\Users\Mert\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial.Database\bin\Debug\NeoSocial.Database.dll.config
 C:\Users\Mert\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial.Database\bin\Debug\NeoSocial.Database.dll
 C:\Users\Mert\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial.Database\bin\Debug\NeoSocial.Database.pdb
@@ -18,3 +8,12 @@ C:\Users\Mert\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial.Database\bin\De
 C:\Users\Mert\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial.Database\obj\Debug\NeoSocial.Database.csprojResolveAssemblyReference.cache
 C:\Users\Mert\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial.Database\obj\Debug\NeoSocial.Database.dll
 C:\Users\Mert\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial.Database\obj\Debug\NeoSocial.Database.pdb
+C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial.Database\bin\Debug\NeoSocial.Database.dll.config
+C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial.Database\bin\Debug\NeoSocial.Database.dll
+C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial.Database\bin\Debug\NeoSocial.Database.pdb
+C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial.Database\bin\Debug\EntityFramework.dll
+C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial.Database\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial.Database\bin\Debug\EntityFramework.xml
+C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial.Database\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial.Database\obj\Debug\NeoSocial.Database.dll
+C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial.Database\obj\Debug\NeoSocial.Database.pdb

@@ -8,3 +8,13 @@ C:\Users\Mert\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial.Business\bin\De
 C:\Users\Mert\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial.Business\obj\Debug\NeoSocial.Business.csprojResolveAssemblyReference.cache
 C:\Users\Mert\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial.Business\obj\Debug\NeoSocial.Business.dll
 C:\Users\Mert\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial.Business\obj\Debug\NeoSocial.Business.pdb
+C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial.Business\bin\Debug\NeoSocial.Business.dll.config
+C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial.Business\bin\Debug\NeoSocial.Business.dll
+C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial.Business\bin\Debug\NeoSocial.Business.pdb
+C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial.Business\bin\Debug\NeoSocial.Database.dll
+C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial.Business\bin\Debug\EntityFramework.dll
+C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial.Business\bin\Debug\NeoSocial.Database.pdb
+C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial.Business\bin\Debug\EntityFramework.xml
+C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial.Business\obj\Debug\NeoSocial.Business.csprojResolveAssemblyReference.cache
+C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial.Business\obj\Debug\NeoSocial.Business.dll
+C:\Users\Altuğ\Documents\GitHub\NeoSocialRepo\NeoSocial\NeoSocial.Business\obj\Debug\NeoSocial.Business.pdb
