@@ -4,8 +4,10 @@
 }
 
 @using NeoSocial.Database.Models;
+@using NeoSocial.Business;
 
 @{ 
+    
     var postDatabaseList = (List<ArticlePost>)ViewData["postDatabase"];
 
     int countList = postDatabaseList.Count();
@@ -14,17 +16,35 @@
     {
         // http://www.icons-land.com
         <img alt="Unfortunatly" src="~/Content/Image/sad.png" style="float:left; padding-right:8px;" /> 
-         <h3>Unfortunatially, there is nothing to show. @Session["UserId"]</h3>
+         <h3>Unfortunatially, there is nothing to show.</h3>
     }
     else
     {
      
-            foreach(var post in postDatabaseList)
+        foreach(var post in postDatabaseList)
         {
+            int _postOwnerUserId = post.PostOwnerID;
+            ProfileBusiness _profileBusiness = new ProfileBusiness();
+            UserProfile _userProfile = _profileBusiness.getProfileInfo(_postOwnerUserId);
+
+            int _userID = (int)_userProfile.UserID;
+            int _registerId = (int)_userProfile.UserRegisterID;
+            int _iconId = (int)_userProfile.IconID;
+            
+            RegisterBusiness _registerBusiness = new RegisterBusiness();
+            UserRegister _userRegister = _registerBusiness.findById(_registerId);
+
+            string _userRegisterName = _userRegister.Name;
+            string _userRegisterSurname = _userRegister.Surname;
+
+            IconBusiness _iconBusiness = new IconBusiness();
+            ViewData["pathImage"] = _iconBusiness.getIconUrl(_iconId);
+            
             <div class="postTemplate">
                 <img id="avatarImg" src=@ViewData["pathImage"] />
                 <div class="postContent">
-                    @Html.TextBox("txtpostOwnerText","Altuğ YİĞİT",new { @id="postOwnerText", @readonly = true})
+
+                    @Html.ActionLink(_userRegisterName + " " + _userRegisterSurname, "OtherProfile", "Profile", new { userId = _userID }, new { @id = "postOwnerText", @readonly = true })
                     <h2 id="postHeaderText">@post.PostHeader - @post.PostDate</h2>                    
                     @Html.TextArea("txtpostContentTextArea",post.PostContent,2,2 , new {@id="postContentTextArea", @readonly = true})
                     <br />       

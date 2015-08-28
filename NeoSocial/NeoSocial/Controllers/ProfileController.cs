@@ -15,6 +15,7 @@ namespace NeoSocial.Controllers
         IconBusiness _iconBusiness;
         ProfileBusiness _profileBusiness;
         LoginBusiness _loginBusiness;
+        RegisterBusiness _registerBusiness;
         int _userId;
         int _iconId;
 
@@ -91,6 +92,39 @@ namespace NeoSocial.Controllers
 
             _profileBusiness.updateIcon(profile);
            
+            return View();
+        }
+
+        public ActionResult OtherProfile(int userId)
+        {
+            ViewData["userId"] = userId;
+
+            _postBusiness = new PostBusiness();
+            _iconBusiness = new IconBusiness();
+            _profileBusiness = new ProfileBusiness();
+            _registerBusiness = new RegisterBusiness();
+
+            UserProfile _userProfile = _profileBusiness.getProfileInfo(userId);
+
+            int _registerId = (int)_userProfile.UserRegisterID;
+            int _iconId = (int)_userProfile.IconID;
+
+            UserRegister _userRegister = _registerBusiness.findById(_registerId);
+
+            string _userRegisterName = _userRegister.Name;
+            string _userRegisterSurname = _userRegister.Surname;
+
+            try
+            {
+                ViewData["registerName"] = _userRegisterName;
+                ViewData["registerSurname"] = _userRegisterSurname;
+                ViewData["pathImage"] = _iconBusiness.getIconUrl(_iconId);
+                ViewData["postDatabase"] = _postBusiness.getUserArticlePost(userId);
+            }
+            catch (Exception ex)
+            {
+            }
+
             return View();
         }
     }

@@ -19,7 +19,7 @@
 		<div id="menu">
             @Html.ActionLink("Main Page", "MainPage", "Main",null, new { @class="btn" })
             @Html.ActionLink("Share Article","Profile", "Profile",null, new { @class="btn" })     
-            @Html.ActionLink("Log Out", "LogOut", "User", null, new { @class="btn" })      
+            @Html.ActionLink("Log Out", "LogOut", "User", null, new { @class="btn" })  
         </div>
 	</header>
 
@@ -31,7 +31,7 @@
 				</div>
 				
 				<div class="data">
-					<h1>Altuğ YİĞİT</h1>
+					<h1>@ViewData["registerName"] @ViewData["registerSurname"]</h1>
 					<h3>EDİRNE</h3>
 					<div class="socialMediaLinks">
 						
@@ -39,8 +39,7 @@
 					<div class="sep"></div>
 					<ul class="numbers clearfix">
 						<li>Yazılar
-                            
-                            
+
                                 @{ 
                                     int countList;
                                         try

@@ -18,7 +18,7 @@ namespace NeoSocial.Business
         void addUser(UserRegister userRegister);
         bool checkUser(UserLogin userLogin);
         List<UserRegister> findID(UserRegister userRegister);
-    
+        
     }
 
 
@@ -72,9 +72,7 @@ namespace NeoSocial.Business
 
       public UserRegister findById(int registerId)
       {
-          _userRegister = new UserRegister();
-
-          _userContext.UserRegisterRepository.Find(a => a.UserRegisterID == registerId);
+          _userRegister = _userContext.UserRegisterRepository.Find(a => a.UserRegisterID == registerId);
 
           return _userRegister;
       }
