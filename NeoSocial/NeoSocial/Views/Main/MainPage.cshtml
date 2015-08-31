@@ -47,7 +47,7 @@
                     @Html.ActionLink(_userRegisterName + " " + _userRegisterSurname, "OtherProfile", "Profile", new { userId = _userID }, new { @id = "postOwnerText", @readonly = true })
                     <h2 id="postHeaderText">@post.PostHeader - @post.PostDate</h2>                    
                     @Html.TextArea("txtpostContentTextArea",post.PostContent,2,2 , new {@id="postContentTextArea", @readonly = true})
-                    <br />       
+                           
                     <h4 class="likecomclass"><!--http://www.iconsmind.com --><img id="likeIcon" src="/Content/Image/like.png" /> Like : @post.PostLikeCount || <!-- http://icons8.com --><img id="commentIcon" src="/Content/Image/comment.png" /> Comment : @post.PostCommentID</h4>     
                 </div>  
             </div>
